@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Task Item";
+}
+
+<div class="page-header">
+    <h3>CRUD operation method read.</h3>
+</div>
+
+<div class="alert alert-info fade in" id="DebugAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p align="center"><span id='DebugInfo'></span></p>
+</div>
+
+<div class="alert alert-success fade in" id="LoadingAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p align="center"><img src="/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/styles/Default/loading_2x.gif" /></p>
+    <p align="center"><span id='LoadingInfo'></span></p>
+</div>
+
+<div class="alert alert-danger fade in" id="ErrorAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p align="center"><span id='ErrorResult'></span></p>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-condensed" id="resultsGrid" style="table-layout: fixed; width: 100%">
+        <thead>
+            <tr>
+                <th style='width: 50px'></th>
+                <th style='width: 50px'></th>
+                <th style='width: 50px'></th>
+                <th style='width: 155px'>Create Date</th>
+                <th>Task Name</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+@section scripts {
+    <script>
+
+        //http://stackoverflow.com/questions/12385501/populate-jquery-data-table-with-returned-json-data
+
+        var uri = '/CoreApi/TaskItem';
+        var varsMsg = 'uri=' + uri;
+
+        function AlertAjaxBegin() {
+            $("#ErrorAlert").alert('close');
+            //$('#LoadingInfo').text('Making service request' + varsMsg);
+            //$('#DebugInfo').text(varsMsg);
+            $("#LoadingAlert").alert();
+            
+        }
+
+        function AlertEnd() {
+            $("#LoadingAlert").alert('close');
+        }
+
+        $(document).ready(function () {
+            FillTable();
+        });
+
+        function EditTable(KeyId) {
+            alert('EditTable KeyId=' + KeyId);
+        }
+
+        function DeleteRecord(KeyId) {
+
+            
+            var request = uri + '/Delete?KeyId=' + KeyId;
+
+            $('#DebugInfo').text(request);
+
+            AlertAjaxBegin();
+            $.ajax({
+                type: 'DELETE',
+                url: request
+            }).done(function (data) {
+                AlertEnd();
+                FillTable();
+            });
+        }
+
+
+
+        function FillTable() {
+            $('#resultsGrid tbody').empty();
+            AlertAjaxBegin();
+            $.ajax({
+                type: 'GET',
+                url: uri
+            }).done(function (data) {
+                $.each(data, function (KeyId, item) {
+                    
+                    var table = $("table");
+                    var tr = $("<tr></tr>");
+                    table.append(tr);
+
+                    var td = $("<td>" + item.KeyId + "</td>");
+                    tr.append(td);
+
+                    //var td = $("<td><button type='button' class='btn btn-default btn-xs' onclick='alert(" + item.KeyId + ");'" + " id='editBtnId" + item.KeyId + "'><span class='glyphicon glyphicon-pencil'></span></button></td>");
+                    //tr.append(td);
+
+                    var td = $("<td><button type='button' class='btn btn-default btn-xs' onclick='EditTable(" + item.KeyId + ");'" + " id='editBtnId" + item.KeyId + "'><span class='glyphicon glyphicon-pencil'></span></button></td>");
+                    tr.append(td);
+
+                    //var td = $("<td><button type='button' class='btn btn-default btn-xs' onclick='alert(" + item.KeyId + ");'" + " id='deleteBtnId" + item.KeyId + "'><span class='glyphicon glyphicon-remove'></span></button></td>");
+                    //tr.append(td);
+
+                    var td = $("<td><button type='button' class='btn btn-default btn-xs' onclick='DeleteRecord(" + item.KeyId + ");'" + " id='deleteBtnId" + item.KeyId + "'><span class='glyphicon glyphicon-remove'></span></button></td>");
+                    tr.append(td);
+
+                    var td = $("<td>" + item.CreateDate + "</td>");
+                    tr.append(td);
+
+                    var td = $("<td>" + item.TaskName + "</td>");
+                    tr.append(td);
+
+                    AlertEnd();
+                    
+                });
+            });
+        }
+
+
+
+    </script>
+}

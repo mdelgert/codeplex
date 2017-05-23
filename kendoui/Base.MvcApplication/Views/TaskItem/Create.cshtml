@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Task Item";
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <label for="TaskName">Task Name</label>
+                <input type="text" class="form-control" value="test" id="TaskName" placeholder="Enter Task Name">
+            </div>
+            <div class="form-group">
+                <button type="button" id="saveBtn" class="btn btn-primary btn-lg btn-block" onclick="createTaskItem();">Create</button>
+            </div>
+            <div class="form-group">
+                <span id='value1'>(Result)</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+
+        function createTaskItem() {
+
+            var taskName = $('#TaskName').val();
+            var uri = '/CoreApi/TaskItem?taskName=' + taskName;
+            var method = 'post';
+
+            $.ajax({
+                type: method,
+                url: uri,
+                crossDomain: true,
+            }).done(function (data) {
+                $('#value1').text(data);
+            }).error(function (jqXHR, textStatus, errorThrown) {
+                $('#value1').text(jqXHR.responseText || textStatus);
+            });
+        }
+    </script>
+}

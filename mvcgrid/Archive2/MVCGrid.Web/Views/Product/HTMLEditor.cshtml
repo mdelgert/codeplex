@@ -1,0 +1,35 @@
+﻿@model MVCGrid.Core.Product
+@{
+    ViewBag.Title = "HTML EDITOR";
+}
+
+@*
+https://github.com/ChiperSoft/wmd/tree/1.0-stable
+https://github.com/ChiperSoft/wmd/blob/master/Readme.md
+*@
+
+<title>Test WMD Page</title>
+<link rel="stylesheet" type="text/css" href="/Scripts/WMD/wmd-test.css" />
+<div class="container">
+    <textarea class="edit pretty"></textarea>
+    <br />
+    <div class="wmd-preview pretty">
+    </div>
+    <br />
+    <div class="wmd-output pretty">
+    </div>
+</div>
+@*
+    <div class="content-wrapper">
+        @using (Html.BeginForm())
+        {
+            <form class="form-horizontal">
+            <legend>Create</legend>
+            <div class="control-group">
+                @Html.TextAreaFor(model => model.ProductName)
+            </div>
+            </form>
+        }
+     </div>
+*@ 
+<script type="text/javascript" src="/Scripts/WMD/wmd.js"></script>

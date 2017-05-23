@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "TestWebApi";
+}
+
+<div class="container">
+    <div class="page-header">
+        <h3>Test web Api..</h3>
+    </div>
+    <div class="bs-form1">
+        <form role="form">
+            <div class="form-group">
+                <label for="method">Web method</label>
+                <select id="method" class="form-control">
+                    <option value="get">GET</option>
+                    <option value="post">POST</option>
+                    <option value="put">PUT</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="svcUrl">Service Url</label>
+                <input type="text" class="form-control" id="svcUrl" value="/CoreApi/Tests/" placeholder="Enter service URL">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sendRequest();">Submit</button>
+            </div>
+            <div class="form-group">
+                <span id='value1'>(Result)</span>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts {
+    <script>
+        function sendRequest() {
+            var serviceUrl = $('#svcUrl').val();
+            var method = $('#method').val();
+            $.ajax({
+                type: method,
+                url: serviceUrl
+            }).done(function (data) {
+                $('#value1').text(data);
+            }).error(function (jqXHR, textStatus, errorThrown) {
+                $('#value1').text(jqXHR.responseText || textStatus);
+            });
+        }
+    </script>
+}
+

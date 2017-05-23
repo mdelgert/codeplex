@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Base.Core" namespace="Base.Core.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ProductKey" table="ProductKey" lazy="true" >
+    <id name="RecID" column="RecID">
+      <generator class="identity" />
+    </id>
+    <property name="ProductName">
+      <column name="ProductName" sql-type="text" not-null="false" />
+    </property>
+    <property name="ProductID">
+      <column name="ProductID" sql-type="text" not-null="false" />
+    </property>
+    <property name="ProductKeyID">
+      <column name="ProductKeyID" sql-type="text" not-null="false" />
+    </property>
+    <property name="Vendor">
+      <column name="Vendor" sql-type="text" not-null="false" />
+    </property>
+    <property name="Subscription">
+      <column name="Subscription" sql-type="text" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

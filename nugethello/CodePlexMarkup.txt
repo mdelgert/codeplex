@@ -1,0 +1,62 @@
+[image:nuget-229x64.png]
+
+*What is NugGet?*
+
+NuGet is a free and open source package manager for the .NET Framework. NuGet was formerly known as NuPack; the name was changed to avoid confusion with an existing software package called NUPACK. NuGet is distributed as a Visual Studio extension, integrated with SharpDevelop, and included in the C# code snippet tool LINQPad. NuGet can be used from the command line and automated via scripts. NuGet supports native packages written in C++. Since its introduction in 2010, NuGet has evolved into a larger ecosystem of tools and services. [url:http://en.wikipedia.org/wiki/NuGet]
+
+*Project Description*
+
+Example in C#  how to create a NugGet package.
+
+To install Nuget Hello World Example!, run the following command in Visual Studio package manager console.
+
+{code:PowerShell}
+PM> Install-Package nugethello
+{code:PowerShell}
+
+NuGet package link. [url:https://www.nuget.org/packages/nugethello/]
+
+Example code usage.
+
+{code:c#}
+
+using System;
+using System.Linq;
+using Base.NugetHello;
+
+namespace Base.ConsoleApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Begin: Base.ConsoleApplication.");
+            Example e = new Example();
+            e.WriteLicense();
+            Console.WriteLine(e.GetMessage());
+            Console.WriteLine("");
+            Console.WriteLine("End: Base.ConsoleApplication.");
+            Console.WriteLine("");
+            Console.WriteLine("Press anykey to exit.");
+            Console.ReadKey();
+        }
+    }
+}
+
+{code:c#}
+
+*Links*
+
+Project url - [url:https://nuget.codeplex.com/]
+
+NuGet website - [url:https://www.nuget.org/]
+
+NuGet creating a package - [url:http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package]
+
+Using A GUI (Package Explorer) to build packages - [url:http://docs.nuget.org/docs/creating-packages/using-a-gui-to-build-packages]
+
+Run following url in IE did not work in chrome for me - [url:https://npe.codeplex.com/downloads/get/clickOnce/NuGetPackageExplorer.application]
+
+Using the Package Manager Console - [url:http://docs.nuget.org/docs/start-here/using-the-package-manager-console]
+
+Nuget Videos - [url:http://docs.nuget.org/docs/start-here/videos]

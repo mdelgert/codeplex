@@ -1,0 +1,4 @@
+﻿Tutorial: SignalR Self-Host - http://www.asp.net/signalr/overview/signalr-20/getting-started-with-signalr-20/tutorial-signalr-20-self-host
+
+PM> Install-Package Microsoft.AspNet.SignalR.SelfHost
+PM> Install-Package Microsoft.Owin.Cors

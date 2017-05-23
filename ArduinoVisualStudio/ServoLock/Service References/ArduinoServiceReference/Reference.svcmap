@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="33cb09ca-3a8c-4a1d-bbcd-3a1ffa0e34a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.97:8080/ServiceArduinoSwitches.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceArduinoSwitches.disco" MetadataType="Disco" ID="fd07c23b-8db5-426f-ad45-1f2fa3602406" SourceId="1" SourceUrl="http://192.168.1.97:8080/ServiceArduinoSwitches.svc?disco" />
+    <MetadataFile FileName="ServiceArduinoSwitches.xsd" MetadataType="Schema" ID="9bb1c1cd-61f1-4d8b-b863-5f60ca450a7f" SourceId="1" SourceUrl="http://192.168.1.97:8080/ServiceArduinoSwitches.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceArduinoSwitches.wsdl" MetadataType="Wsdl" ID="edc02f62-d08b-48da-bf43-94849b72197a" SourceId="1" SourceUrl="http://192.168.1.97:8080/ServiceArduinoSwitches.svc?wsdl" />
+    <MetadataFile FileName="ServiceArduinoSwitches1.xsd" MetadataType="Schema" ID="23b74904-5073-4cda-a345-f4cd65bff84e" SourceId="1" SourceUrl="http://192.168.1.97:8080/ServiceArduinoSwitches.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

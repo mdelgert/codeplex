@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    @*
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Content/themes/MobileTheme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("http://code.jquery.com/jquery-1.10.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js")" type="text/javascript"></script>
+    *@
+
+    <link href="@Url.Content("~/Content/themes/MobileTheme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/jquery.mobile.structure-1.4.0-rc.1.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.mobile-1.4.0-rc.1.min.js")" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div data-role="header">
+        <h1>Header</h1>
+    </div>
+    <br />
+    <div data-role="controlgroup">
+        <a href="/" data-role="button">Home</a>
+        <a href="/Home/LightOn" data-role="button">Light On</a>
+        <a href="/Home/LightOff" data-role="button">Light Off</a>
+        <a href="/Home/License" data-role="button">License</a>
+        <a href="/Home/About" data-role="button">About</a>
+    </div>
+    <br />
+    @RenderBody()
+    <br />
+    <div data-role="footer" class="ui-bar">
+        <p>Footer</p>
+    </div>
+</body>
+</html>

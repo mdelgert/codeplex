@@ -1,0 +1,27 @@
+﻿
+Installed nuget 
+
+Microsoft ASP.NET Web Optimization - https://www.nuget.org/packages/microsoft.aspnet.web.optimization/
+PM> Install-Package Microsoft.AspNet.Web.Optimization
+
+To review 
+
+Starter ASP.NET MVC Website Template - ServiceStack - https://www.nuget.org/packages/ServiceStack.Host.Mvc/
+Super charge your ASP.NET MVC website with ServiceStack's MVC PowerPack! - http://mono.servicestack.net/mvc-powerpack/
+
+Why are @Scripts and @Styles commands not be recognized in MVC4 Razor layout file? - http://stackoverflow.com/questions/14665491/why-are-scripts-and-styles-commands-not-be-recognized-in-mvc4-razor-layout-fil
+
+Make sure that the System.Web.Optimization.dll assembly has been referenced in your project and that the <add namespace="System.Web.Optimization"/> namespace has been added to your ~/Views/web.config file (not ~/web.config file):
+
+<system.web.webPages.razor>
+    <host factoryType="System.Web.Mvc.MvcWebRazorHostFactory, System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+    <pages pageBaseType="System.Web.Mvc.WebViewPage">
+      <namespaces>
+        <add namespace="System.Web.Mvc" />
+        <add namespace="System.Web.Mvc.Ajax" />
+        <add namespace="System.Web.Mvc.Html" />
+        <add namespace="System.Web.Optimization"/>
+        <add namespace="System.Web.Routing" />
+      </namespaces>
+    </pages>
+</system.web.webPages.razor>

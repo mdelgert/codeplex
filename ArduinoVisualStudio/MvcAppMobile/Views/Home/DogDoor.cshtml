@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Dog Door";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dog Door</h2>
+
+@*
+<p>
+    <a href="#" data-role="button" data-inline="true" data-theme="a">Open</a>
+    <a href="#" data-role="button" data-inline="true" data-theme="d">Close</a>
+</p>
+*@
+
+<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="c" data-count-theme="a">
+    <li data-role="list-divider">Actions</li>
+    <li>@Html.ActionLink("Open", "DogDoorOpen", "Home")</li>
+    <li>@Html.ActionLink("Close", "DogDoorClose", "Home")</li>
+</ul>

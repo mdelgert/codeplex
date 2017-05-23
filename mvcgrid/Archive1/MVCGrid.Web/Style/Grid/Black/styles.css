@@ -1,0 +1,52 @@
+.Black_Grid
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: #1d1d1d 3px solid;
+	margin-top:4px;
+}
+.Black_GridHeader, .Black_Pager
+{
+    background-color:#1d1d1d;
+}
+
+.Black_GridHeader a
+{
+    text-decoration: underline;
+    color:#ffffff;
+    font-weight:normal;
+}
+
+.Black_GridItem td, .Black_GridAlternatingItem td
+{
+    padding: 5px;
+    border-right: solid 1px #1d1d1d;
+}
+
+.Black_GridHeader td
+{
+    padding: 5px;
+    color: #ffffff;
+}
+
+.Black_GridItem
+{
+	background: lightyellow;
+}
+
+tr.highlight td 
+{
+background-color : #ccc;
+}
+
+.Black_GridItem td
+{
+    background-color: #c9c9c9;
+}
+.Black_GridAlternatingItem td
+{
+    background-color: #f0f0f0;
+}
+

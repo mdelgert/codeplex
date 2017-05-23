@@ -1,0 +1,53 @@
+﻿@*Original from KendoUI examples see _SourceKendoUI.cshtml version modified*@
+
+@Styles.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/styles/examples-offline.css")
+
+@{
+
+    var viewPath = ((BuildManagerCompiledView)ViewContext.View).ViewPath;
+    var viewSource = System.IO.File.ReadAllText(Server.MapPath(viewPath));
+
+    //.cshtml not returning on AppHarbor
+    var routeData = ViewContext.RouteData;
+    var controllerName = routeData.GetRequiredString("controller");
+    var viewName = routeData.GetRequiredString("action");
+    var controllerPath = Server.MapPath("~/Controllers/" + controllerName + "Controller.cs");
+
+    string controllerSource = "";
+
+    if (System.IO.File.Exists(controllerPath))
+    {
+        controllerSource = System.IO.File.ReadAllText(controllerPath);
+    }
+
+}
+
+<div class="container">
+    <div class="source">
+        <h3>Source:</h3>
+        <a href="#" class="offline-button view selected">View</a>
+        <a href="#" class="offline-button controller">Controller</a>
+        <div class="code">
+            <pre class="prettyprint controller">@controllerSource</pre>
+            <pre class="prettyprint view">@viewSource</pre>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/console.js")
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/prettify.js")
+
+<script>
+    $(function () {
+        prettyPrint();
+        $(".source a").click(function (e) {
+            var showView = $(this).is(".view");
+            $(".source .code")
+                .find(".view").toggle(showView).end()
+                .find(".controller").toggle(!showView);
+            $(".source a").toggleClass("selected");
+            e.preventDefault();
+        });
+    });
+
+</script>

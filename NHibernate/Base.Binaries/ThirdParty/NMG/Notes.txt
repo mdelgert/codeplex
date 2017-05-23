@@ -1,0 +1,6 @@
+NHibernate Mapping Generator 4.1
+
+https://nmg.codeplex.com/
+
+https://nmg.codeplex.com/license
+

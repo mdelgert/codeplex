@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApp
+{
+    public partial class _Default : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //ElmahExtension.LogToElmah(new ApplicationException("Test exception"));
+
+        }
+
+        public string GetSessionValue()
+        {
+            Session["TEST"] = "TEST";
+            System.Diagnostics.Debug.WriteLine("DEBUG:" + Session["TEST"].ToString());
+            return Session["TEST"].ToString();
+        }
+
+    }
+}

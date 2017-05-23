@@ -1,0 +1,8 @@
+﻿Group: Nop.Plugin.VESSEA
+FriendlyName: Nop.Plugin.VESSEA.Template 
+SystemName: Nop.Plugin.VESSEA.Template
+Version: 1.2
+SupportedVersions: 3.40
+Author: Matthew David Elgert - http://www.vessea.com
+DisplayOrder: 1
+FileName: Nop.Plugin.VESSEA.Template.dll

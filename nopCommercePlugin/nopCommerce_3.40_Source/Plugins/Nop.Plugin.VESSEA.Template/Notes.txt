@@ -1,0 +1,92 @@
+﻿https://mvcpluginframework.codeplex.com/
+http://www.codeproject.com/Articles/358360/NET-ASP-NET-MVC-plug-in-architecture-with-e
+http://www.codeproject.com/Articles/614767/NET-ASP-NET-MVC-plug-in-architecture-with-embedded
+
+nopCommerce 3.40 plugin template setup example.
+
+The developer documentation suggests adding a class project for plugin development - http://docs.nopcommerce.com/display/nc/Creating+a+nopCommerce+plugin
+
+When a class project is select Visual Studio removes the default MVC tools from menu context such as create view and controllers.  
+
+A empty web project is a class project my selecting empty visual studio web project a developer gets the benefits of the MVC developer tools and razor syntax highlighting.
+
+1. Right click on plugins
+2. Add new project
+3. ASP.NET Web Application
+4. Nop.Plugin.VESSEA.Template
+5. Select folder \Plugins
+6. Select empty project
+7. Properties web unselected IIS Express
+8. Package manager default project set to Nop.Plugin.VESSEA.Template
+9. Add project references to Nop.Core, Nop.Data, Nop.Services & Nop.Web.Framework
+10. Install-Package EntityFramework -Version 6.0.0 
+11. Install-Package Microsoft.AspNet.Mvc -Version 5.2.0.0
+
+Install-Package Autofac -Version 3.5.0
+
+<package id="Autofac" version="3.5.0" targetFramework="net451" />
+
+12. Add folders  Content, Controllers, Data, Domain, Files, Models, Services, Views & Views\VESSEATemplate
+13. Add files Description.txt and logo.jpg
+14. Right click Views\VESSEATemplate\ select add new view. "View name:  Configure, Template: Empty without model and unselect use layout page."
+15. Put some sample code in view like.
+16. Right click on Nop.Plugin.VESSEA.Template set "Always start when debugging to" false so IIS express does not launch 
+
+### CODE BEGIN ###
+
+@{
+    Layout = "";
+}
+
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+   <p>Hello World!</p>
+}
+
+### CODE END ###
+
+Note: Visual Studio 2013 razor syntax highlighting will not work and have errors until project is compiled for the first time saved, closed the reopen.
+
+Project code files setup
+
+Right click root of project add new class "VESSEATemplateSettings.cs"
+### CODE BEGIN ###
+### CODE END ###
+
+Right click root of project add new class "Models\VESSEATemplateModel.cs"
+### CODE BEGIN ###
+### CODE END ###
+
+Right click root of project add new class "Controllers\VESSEATemplateController.cs"
+### CODE BEGIN ###
+### CODE END ###
+
+*Important*
+
+For a nopCommerce release plugin need to change "set build output path to ..\..\Presentation\Nop.Web\Plugins\VESSEA.Template\"
+
+Select references Microsoft.Web.Infrastructure specific version true
+Select references EntityFramework change copy local to false
+Select references EntityFramework.SqlServer change copy local to false
+Select references Microsoft.Web.Infrastructure change copy local to false
+Select references System.Web.Helpers change copy local to false
+Select references System.Web.Mvc change copy local to false
+Select references System.Web.Razor change copy local to false
+Select references System.Web.WebPages change copy local to false
+Select references System.Web.WebPages.Deployment change copy local to false
+Select references System.Web.WebPages.Razor change copy local to false
+Configure.cshtml - build action content copy to output directory set to (Copy if newer)
+
+
+In Visual Studio 2013 razor syntax highlighting will stop working after the project gets compiled outside of the "bin\" folder after Visual studio is closed and project is reopened. 
+
+There are many posts in nopCommerce forums regarding MVC razor syntax highlighting not working.
+
+This is very important to understand this behaviour of Visual Studio 2013 for the reason it only happens after the IDE is closed and reopened.
+
+To get razor syntax highlighting working again point the project out put path back at  "bin\" folder save changes. Clean the solution close Visual Studio 2014.
+
+The first time I came across this issue forums suggested making changes to visual studio, reloading visual studio, reseting visual studio settings, code changes and other suggestions.
+
+Visual studio needs "System.Web.Mvc" in the bin directory loaded and compiled in the GAC for syntax highlighting to be enabled.

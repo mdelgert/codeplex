@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackupScheduler.BusinessLogicLayer", "CloudBackupScheduler.BusinessLogicLayer\CloudBackupScheduler.BusinessLogicLayer.csproj", "{6FFD0320-5785-44A9-8203-13CD111A943E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackupScheduler.ClientWindowsFormsApplication", "CloudBackupScheduler.ClientWindowsFormsApplication\CloudBackupScheduler.ClientWindowsFormsApplication.csproj", "{02C42204-B9FD-408B-8542-B6D7944DE9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackupScheduler.ConsoleApplication", "CloudBackupScheduler.ConsoleApplication\CloudBackupScheduler.ConsoleApplication.csproj", "{9343593D-4F68-48BC-8B70-CBB4E8B23092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackupScheduler.DataAccessLayer", "CloudBackupScheduler.DataAccessLayer\CloudBackupScheduler.DataAccessLayer.csproj", "{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CloudBackupScheduler.Database", "CloudBackupScheduler.Database\CloudBackupScheduler.Database.sqlproj", "{2DA85582-EAE7-47A9-8456-7E0D09957485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackupScheduler.Models", "CloudBackupScheduler.Models\CloudBackupScheduler.Models.csproj", "{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenZip", "packages\sevenzipsharp-79962\SevenZip\SevenZip.csproj", "{4960DD14-3431-47EC-B9D9-9D2730A98DC3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CloudBackupScheduler.BusinessLogicLayer\\CloudBackupScheduler.BusinessLogicLayer.csproj
+		SccProjectName1 = CloudBackupScheduler.BusinessLogicLayer
+		SccLocalPath1 = CloudBackupScheduler.BusinessLogicLayer
+		SccProjectUniqueName2 = CloudBackupScheduler.ClientWindowsFormsApplication\\CloudBackupScheduler.ClientWindowsFormsApplication.csproj
+		SccProjectName2 = CloudBackupScheduler.ClientWindowsFormsApplication
+		SccLocalPath2 = CloudBackupScheduler.ClientWindowsFormsApplication
+		SccProjectUniqueName3 = CloudBackupScheduler.ConsoleApplication\\CloudBackupScheduler.ConsoleApplication.csproj
+		SccProjectName3 = CloudBackupScheduler.ConsoleApplication
+		SccLocalPath3 = CloudBackupScheduler.ConsoleApplication
+		SccProjectUniqueName4 = CloudBackupScheduler.DataAccessLayer\\CloudBackupScheduler.DataAccessLayer.csproj
+		SccProjectName4 = CloudBackupScheduler.DataAccessLayer
+		SccLocalPath4 = CloudBackupScheduler.DataAccessLayer
+		SccProjectUniqueName5 = CloudBackupScheduler.Database\\CloudBackupScheduler.Database.sqlproj
+		SccProjectName5 = CloudBackupScheduler.Database
+		SccLocalPath5 = CloudBackupScheduler.Database
+		SccProjectUniqueName6 = CloudBackupScheduler.Models\\CloudBackupScheduler.Models.csproj
+		SccProjectName6 = CloudBackupScheduler.Models
+		SccLocalPath6 = CloudBackupScheduler.Models
+		SccProjectUniqueName7 = packages\\sevenzipsharp-79962\\SevenZip\\SevenZip.csproj
+		SccProjectName7 = packages/sevenzipsharp-79962/SevenZip
+		SccLocalPath7 = packages\\sevenzipsharp-79962\\SevenZip
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Deploy|Any CPU = Deploy|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFD0320-5785-44A9-8203-13CD111A943E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C42204-B9FD-408B-8542-B6D7944DE9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9343593D-4F68-48BC-8B70-CBB4E8B23092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62AC7E4F-EDCE-455F-8923-1DD6A2E86E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Deploy|Any CPU.Deploy.0 = Debug|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA85582-EAE7-47A9-8456-7E0D09957485}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Deploy|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Deploy|Any CPU.Build.0 = Debug|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFB1DB3-117E-4971-ACD5-6581A4B37B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Deploy|Any CPU.ActiveCfg = Deploy|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Deploy|Any CPU.Build.0 = Deploy|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4960DD14-3431-47EC-B9D9-9D2730A98DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

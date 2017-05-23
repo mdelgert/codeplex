@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Task - Index";
+}
+
+<div class="page-header">
+    <h3>Task CRUD operations.</h3>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Create", "Task")'">Create</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("ReadAll", "Task")'">Read all</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Select", "Task")'">Select</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Read", "Task")'">Read</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Update", "Task")'">Update</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Delete", "Task")'">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>

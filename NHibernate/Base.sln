@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplication", "Base.ConsoleApplication\Base.ConsoleApplication.csproj", "{79AD67AA-3734-411F-90F5-72A55FF25478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Core", "Base.Core\Base.Core.csproj", "{25A94F7F-F360-4120-A896-5DDC52AD0514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Binaries", "Base.Binaries\Base.Binaries.csproj", "{39F31CC3-1FF1-4253-BE59-EC588B10B130}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B77E3CEE-7E13-4F70-ADE0-FBAAF1C30DBE}"
+	ProjectSection(SolutionItems) = preProject
+		BaseNotes.txt = BaseNotes.txt
+		ProjectDocumentation.docx = ProjectDocumentation.docx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleEntityTest", "Base.ConsoleEntityTest\Base.ConsoleEntityTest.csproj", "{81339A1B-31B3-4A45-B428-3658A9A93077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplicationFluentNHibernate", "Base.ConsoleApplicationFluentNHibernate\Base.ConsoleApplicationFluentNHibernate.csproj", "{D7B16206-C6FB-48B5-B644-1140F1F233FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcApplication1", "Base.MvcApplication1\Base.MvcApplication1.csproj", "{C5DCD78A-50C0-41A3-B37B-D0C59A566948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleEntityTest2", "Base.ConsoleEntityTest2\Base.ConsoleEntityTest2.csproj", "{8783C87E-B481-40E8-A434-AF89D1FE0060}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Base.Binaries\\Base.Binaries.csproj
+		SccProjectName1 = Base.Binaries
+		SccLocalPath1 = Base.Binaries
+		SccProjectUniqueName2 = Base.ConsoleApplication\\Base.ConsoleApplication.csproj
+		SccProjectName2 = Base.ConsoleApplication
+		SccLocalPath2 = Base.ConsoleApplication
+		SccProjectUniqueName3 = Base.Core\\Base.Core.csproj
+		SccProjectName3 = Base.Core
+		SccLocalPath3 = Base.Core
+		SccProjectUniqueName4 = Base.ConsoleEntityTest\\Base.ConsoleEntityTest.csproj
+		SccProjectName4 = Base.ConsoleEntityTest
+		SccLocalPath4 = Base.ConsoleEntityTest
+		SccProjectUniqueName5 = Base.ConsoleApplicationFluentNHibernate\\Base.ConsoleApplicationFluentNHibernate.csproj
+		SccProjectName5 = Base.ConsoleApplicationFluentNHibernate
+		SccLocalPath5 = Base.ConsoleApplicationFluentNHibernate
+		SccProjectUniqueName6 = Base.MvcApplication1\\Base.MvcApplication1.csproj
+		SccProjectName6 = Base.MvcApplication1
+		SccLocalPath6 = Base.MvcApplication1
+		SccProjectUniqueName7 = Base.ConsoleEntityTest2\\Base.ConsoleEntityTest2.csproj
+		SccProjectName7 = Base.ConsoleEntityTest2
+		SccLocalPath7 = Base.ConsoleEntityTest2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79AD67AA-3734-411F-90F5-72A55FF25478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AD67AA-3734-411F-90F5-72A55FF25478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AD67AA-3734-411F-90F5-72A55FF25478}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AD67AA-3734-411F-90F5-72A55FF25478}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{25A94F7F-F360-4120-A896-5DDC52AD0514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A94F7F-F360-4120-A896-5DDC52AD0514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A94F7F-F360-4120-A896-5DDC52AD0514}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A94F7F-F360-4120-A896-5DDC52AD0514}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{39F31CC3-1FF1-4253-BE59-EC588B10B130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F31CC3-1FF1-4253-BE59-EC588B10B130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F31CC3-1FF1-4253-BE59-EC588B10B130}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F31CC3-1FF1-4253-BE59-EC588B10B130}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{81339A1B-31B3-4A45-B428-3658A9A93077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81339A1B-31B3-4A45-B428-3658A9A93077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81339A1B-31B3-4A45-B428-3658A9A93077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81339A1B-31B3-4A45-B428-3658A9A93077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B16206-C6FB-48B5-B644-1140F1F233FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B16206-C6FB-48B5-B644-1140F1F233FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B16206-C6FB-48B5-B644-1140F1F233FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B16206-C6FB-48B5-B644-1140F1F233FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DCD78A-50C0-41A3-B37B-D0C59A566948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DCD78A-50C0-41A3-B37B-D0C59A566948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DCD78A-50C0-41A3-B37B-D0C59A566948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DCD78A-50C0-41A3-B37B-D0C59A566948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8783C87E-B481-40E8-A434-AF89D1FE0060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8783C87E-B481-40E8-A434-AF89D1FE0060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8783C87E-B481-40E8-A434-AF89D1FE0060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8783C87E-B481-40E8-A434-AF89D1FE0060}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Base.ConsoleApplication\Base.ConsoleApplication.csproj
+	EndGlobalSection
+EndGlobal

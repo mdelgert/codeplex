@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="Base.Core" namespace="Base.Core.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <!--<class name="Tasklist" table="TaskList" lazy="true" >-->
+  <class name="Tasklist" table="TaskList">
+    <id name="Taskid" column="TaskId">
+      <generator class="identity" />
+    </id>
+    <property name="Taskname">
+      <column name="TaskName" sql-type="nvarchar(50)" not-null="false" />
+    </property>
+    <property name="Tasktext">
+      <column name="TaskText" sql-type="nvarchar(50)" not-null="false" />
+    </property>
+    <property name="Createdate">
+      <column name="CreateDate" sql-type="datetime" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

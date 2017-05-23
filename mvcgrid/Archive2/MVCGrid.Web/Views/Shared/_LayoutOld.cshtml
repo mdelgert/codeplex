@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - MVC Grid</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                </div>
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Index", "Index", "Product")</li>
+                            <li>@Html.ActionLink("Create", "Create", "Product")</li>
+                            <li>@Html.ActionLink("Read", "Read", "Product")</li>
+                            <li>@Html.ActionLink("Update", "Update", "Product")</li>
+                            <li>@Html.ActionLink("Delete", "Delete", "Product")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+    </div>
+</body>
+</html>

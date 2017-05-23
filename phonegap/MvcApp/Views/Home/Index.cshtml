@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>Easily create apps with the only free open source framework that supports 7 mobile platforms.</p>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Geo Location", "GeoLocation", "Home")</li>
+    <li>@Html.ActionLink("Picture", "Picture", "Home")</li>
+</ul>

@@ -1,0 +1,69 @@
+Copyright © 2013 Matthew David Elgert - mdelgert@yahoo.com, Project URL: https://raspberrypi.codeplex.com, License: https://raspberrypi.codeplex.com/license - GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright © 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too. When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things. To protect your rights, we need to prevent others from denying you these rights or asking you to surrender the rights. Therefore, you have certain responsibilities if you distribute copies of the software, or if you modify it: responsibilities to respect the freedom of others. For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights. Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it. For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software. For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions. Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users. Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free. 
+
+Author: Matthew David Elgert, Authored Date: 12/9/2013, Modified Date: 12/9/2013
+
+Notes:
+
+URLS:
+
+Get MVC3 Razor Running on Mono - http://www.integratedwebsystems.com/2011/06/get-mvc3-razor-running-on-mono/
+Do NOT copy the Microsoft.Web.Infrastructure assembly.  This assembly has been rebuilt in the mono library and will already be available to your app. 
+
+ASP.NET MVC on your Raspberry Pi - http://www.codewithmac.com/2013/05/asp-net-mvc-on-your-raspberry-pi/
+MonoDevelop C# on RPI - http://www.raspberrypi.org/phpBB3/viewtopic.php?f=34&t=7631
+
+1. Download soft-float - ftp://ftp.mirrorservice.org/sites/downloads.raspberrypi.org/images/debian/7/2013-05-29-wheezy-armel/2013-05-29-wheezy-armel.zip
+
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get install nginx
+sudo mkdir /var/www/
+sudo apt-get install mono-complete
+sudo apt-get install monodevelop
+sudo apt-get install mono-xsp2
+sudo apt-get asp.net-examples
+sudo apt-get install mono-xsp4
+
+sudo apt-get install mono-fastcgi-server4
+
+sudo mkdir /var/www/test1.myraspberrypi.local
+cd /var/www
+sudo chown -R www-data:www-data test1.myraspberrypi.local
+sudo chmod -R 775 test1.myraspberrypi.local
+sudo apt-get install mono-complete
+
+RPi XRDP Server: - http://elinux.org/RPi_XRDP_Server
+$ sudo apt-get install xrdp
+
+User: pi Password: raspberry
+
+Install Firefox - http://linuxg.net/can-i-install-google-chrome-on-raspberry-pi/
+$ sudo apt-get install iceweasel
+
+How do I install Google Chrome for Raspberry PI - http://www.ilyax.com/post/103/google-chrome-raspberrypi
+$ sudo apt-get install chromium-browser
+$ sudo apt-get install chromium-bsu
+$ sudo apt-get update
+
+xsp2 --root /usr/share/asp.net-demos/
+
+Webmin - http://www.webmin.com/deb.html
+$ sudo su
+# apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
+# cd /
+# cd /tmp
+# mkdir WebminInstall
+# cd WebminInstall
+# wget http://prdownloads.sourceforge.net/webadmin/webmin_1.660_all.deb
+# dpkg --install webmin_1.660_all.deb
+
+RPi Easy SD Card Setup - http://elinux.org/RPi_Easy_SD_Card_Setup
+
+1. Download NOOBS from the raspberrypi.org downloads page - http://www.raspberrypi.org/downloads
+2. Download and install the SD Association's Formatting tool from - https://www.sdcard.org/downloads/formatter_4/eula_windows/
+3. Open the Application you have just installed
+4. Set "FORMAT SIZE ADJUSTMENT" to ON in the Options menu.
+5. Make sure you have selected the Drive your SD Card is inserted in
+6. Click "Format"
+7. Extract the file you downloaded in Step 1
+8. Copy the files you just extracted to your SD Card

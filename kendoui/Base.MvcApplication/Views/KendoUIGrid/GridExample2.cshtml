@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "KendoUIGrid";
+}
+
+@section head {
+    @Html.Partial("~/Views/Shared/KendoUIStyle.cshtml")
+}
+
+<h3>Grid example 2.</h3>
+
+<p>Changed field names through javascript.</p>
+
+<div id="grid"></div>
+
+@section scripts {
+
+    @Html.Partial("~/Views/Shared/KendoUIJavaScript.cshtml")
+
+    <script>
+        var tasks = [
+                      { TaskID: "1", TaskName: "Create KendoUI grid example one using javascript only." },
+                      { TaskID: "2", TaskName: "Todo" },
+                      { TaskID: "3", TaskName: "Todo" },
+        ];
+        $("#grid").kendoGrid({
+            dataSource: tasks,
+            columns: [
+                { field: "TaskID", title: "Task ID" },
+                { field: "TaskName", title: "Task Name" }
+            ]
+        })
+    </script>
+}

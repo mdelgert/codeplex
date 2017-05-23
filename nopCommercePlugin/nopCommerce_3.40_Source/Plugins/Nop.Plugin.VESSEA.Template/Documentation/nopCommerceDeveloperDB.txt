@@ -1,0 +1,25 @@
+﻿Developer database installation notes for Microsoft SQL 2012 installation.
+
+
+Create database in Microsoft SQL Management Studio named "nopCommerce3_4"
+
+Create SQL login User: nopDeveloper Password: Password2014
+
+Unselect enforce password policy
+
+User mappings select "nopCommerce3_4" database role db_owner
+
+Right click on Nop.Web project in Visual Studio 2013 set as startup project
+
+Run the project F5 in webbrowser nopCommerce installation screen appears for example "http://localhost:15536/install"
+
+Admin email: admin@localhost.com 
+Password: Password2014
+Select create sample data
+Select use SQL Server
+SQL Server name: localhost
+Database name: nopCommerce3_4
+SQL User: nopDeveloper
+SQL Password: Password2014
+
+Datbase connection string is stored in folder \Nop.Web\App_Data\Settings.txt

@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Log Api";
+}
+
+<div class="page-header">
+    <h3>Api calls.</h3>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <label for="taskId">Search by id.</label>
+                <input type="text" class="form-control" value="1" id="txtKeyId" placeholder="Enter Id">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="find();">Search</button>
+            </div>
+            <div class="form-group">
+                <div class="alert alert-info fade in" id="DebugAlert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <p align="center"><span id='DebugInfo'></span></p>
+                </div>
+
+                <div class="alert alert-success fade in" id="LoadingAlert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <p align="center"><img src="/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/styles/Default/loading_2x.gif" /></p>
+                    <p align="center"><span id='LoadingInfo'></span></p>
+                </div>
+
+                <div class="alert alert-danger fade in" id="ErrorAlert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <p align="center"><span id='ErrorResult'></span></p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-condensed" id="resultsGrid" style="table-layout: fixed; width: 100%">
+                        <thead>
+                            <tr>
+                                <th style='width: 25px'>Id:</th>
+                                <th style='width: 155px'>Date:</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+
+        var uri = '/CoreApi/LogApi/';
+        //var uri = 'http://kendoui.apphb.com/CoreApi/LogApi/';
+
+        var method = 'GET';
+        var varsMsg = 'uri=' + uri + ' method=' + method;
+
+        $(document).ready(function () {
+
+            $('#resultsGrid tbody').empty();
+            $("#ErrorAlert").alert('close');
+            //$("#DebugAlert").alert('close');
+            $('#LoadingInfo').text('Making service request' + varsMsg);
+            $('#DebugInfo').text(varsMsg);
+            $("#LoadingAlert").alert();
+
+            $.ajax({
+                type: method,
+                url: uri
+            }).done(function (data) {
+                $.each(data, function (Id, item) {
+                    $("#LoaadingAlert").alert();
+                    var table = $("#resultsGrid"); //http://stackoverflow.com/questions/12385501/populate-jquery-data-table-with-returned-json-data
+                    var tr = $("<tr></tr>");
+                    table.append(tr);
+
+                    var td = $("<td>" + item.LogApiId + "</td>");
+                    tr.append(td);
+
+                    var td = $("<td>" + item.CreateDate + "</td>");
+                    tr.append(td);
+
+                    var td = $("<td style='word-wrap: break-word'>" + item.Message + "</td>"); //Word-wrap in an HTML table - http://stackoverflow.com/questions/1258416/word-wrap-in-an-html-table
+                    tr.append(td);
+
+                    $("#LoadingAlert").alert('close');
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    $("#ErrorAlert").alert();
+                    $('#ErrorResult').text(jqXHR.responseText || textStatus);
+
+                });
+            });
+        });
+
+        function find() {
+
+            //clear table jquery - http://stackoverflow.com/questions/2620181/clear-table-jquery
+            //$('#resultsGrid').empty()
+            //$("#resultsGrid tr").remove();
+            //$('#resultsGrid tbody').remove();
+            $('#resultsGrid tbody').empty();
+
+            var key = $('#txtKeyId').val();
+
+            //alert(key);
+
+            $("#ErrorAlert").alert('close');
+            //$("#DebugAlert").alert('close');
+            $('#LoadingInfo').text('Making service request' + varsMsg);
+            $('#DebugInfo').text(varsMsg);
+            $("#LoadingAlert").alert();
+
+            $.ajax({
+                type: method,
+                url: uri + '?keyId=' + key
+            }).done(function (data) {
+
+                $("#LoaadingAlert").alert();
+                var table = $("#resultsGrid"); //http://stackoverflow.com/questions/12385501/populate-jquery-data-table-with-returned-json-data
+                var tr = $("<tr></tr>");
+                table.append(tr);
+
+                var td = $("<td>" + data.LogApiId + "</td>");
+                tr.append(td);
+
+                var td = $("<td>" + data.CreateDate + "</td>");
+                tr.append(td);
+
+                var td = $("<td style='word-wrap: break-word'>" + data.Message + "</td>"); //Word-wrap in an HTML table - http://stackoverflow.com/questions/1258416/word-wrap-in-an-html-table
+                tr.append(td);
+
+
+                $("#LoadingAlert").alert('close');
+            }).error(function (jqXHR, textStatus, errorThrown) {
+                $("#ErrorAlert").alert();
+                $('#ErrorResult').text(jqXHR.responseText || textStatus);
+
+            });
+
+        }
+
+
+
+    </script>
+}

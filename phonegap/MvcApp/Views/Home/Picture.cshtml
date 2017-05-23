@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Picture";
+}
+<script type="text/javascript">
+    function getFileName(fileName) {
+        //alert(fileName[0].name);
+        //alert(fileName[0].size);
+    }
+</script>
+<h2>@ViewBag.Message</h2>
+<div class="container">
+    <div data-role="fieldcontain">
+        <label for="file">File:</label>
+        <input type="file" name="userfile" id="file" value="" onchange="getFileName(this.files)" />
+    </div>
+</div>
+

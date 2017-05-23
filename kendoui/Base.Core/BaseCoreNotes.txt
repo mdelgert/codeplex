@@ -1,0 +1,9 @@
+﻿Install-Package Microsoft.AspNet.WebApi -Version 4.0.30506 - https://www.nuget.org/packages/Microsoft.AspNet.WebApi/4.0.30506
+
+Install-Package ServiceStack.OrmLite.Sqlite.Mono - https://www.nuget.org/packages/ServiceStack.OrmLite.Sqlite.Mono
+
+Install-Package FluentNHibernate - https://www.nuget.org/packages/FluentNHibernate/1.4.0
+
+Install-Package System.Linq.Dynamic - https://www.nuget.org/packages/System.Linq.Dynamic/1.0.0
+
+Install-Package Microsoft.AspNet.WebApi.SelfHost.4.0.20710 - https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/4.0.20710

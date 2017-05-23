@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Task - Select";
+}
+
+<div class="page-header">
+    <h3>Task CRUD operations.</h3>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <select class="form-control" id="options"></select>
+        </form>
+        <div class="form-group">
+            <span id='ErrorResult'></span>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'GET',
+                url: '/CoreApi/Task'
+            }).done(function (data) {
+                $.each(data, function (key, item) {
+                    $("#options").append($("<option />").val(item.TaskID).text(item.TaskName));
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    $('#ErrorResult').text(jqXHR.responseText || textStatus);
+                });
+            });
+        });
+    </script>
+}

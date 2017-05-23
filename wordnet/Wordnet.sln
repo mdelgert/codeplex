@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordnet.DataAccessLayer", "Wordnet.DataAccessLayer\Wordnet.DataAccessLayer.csproj", "{B8134AE3-4823-4C77-93EC-7CA7F01B53E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordnet.Models", "Wordnet.Models\Wordnet.Models.csproj", "{871C547D-3D93-4E21-B8B9-89F671541D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordnet.ConsoleApplication", "Wordnet.ConsoleApplication\Wordnet.ConsoleApplication.csproj", "{762E12CC-37DA-48C8-82F7-DD0BF310D8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordnet.BusinessLogicLayer", "Wordnet.BusinessLogicLayer\Wordnet.BusinessLogicLayer.csproj", "{2AEE40D4-98CE-4365-994B-6883420C1BFF}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Wordnet.Database", "Wordnet.Database\Wordnet.Database.sqlproj", "{71273E9E-A192-493A-A9B3-16C6467EA5B5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Wordnet.BusinessLogicLayer\\Wordnet.BusinessLogicLayer.csproj
+		SccProjectName1 = Wordnet.BusinessLogicLayer
+		SccLocalPath1 = Wordnet.BusinessLogicLayer
+		SccProjectUniqueName2 = Wordnet.ConsoleApplication\\Wordnet.ConsoleApplication.csproj
+		SccProjectName2 = Wordnet.ConsoleApplication
+		SccLocalPath2 = Wordnet.ConsoleApplication
+		SccProjectUniqueName3 = Wordnet.DataAccessLayer\\Wordnet.DataAccessLayer.csproj
+		SccProjectName3 = Wordnet.DataAccessLayer
+		SccLocalPath3 = Wordnet.DataAccessLayer
+		SccProjectUniqueName4 = Wordnet.Models\\Wordnet.Models.csproj
+		SccProjectName4 = Wordnet.Models
+		SccLocalPath4 = Wordnet.Models
+		SccProjectUniqueName5 = Wordnet.Database\\Wordnet.Database.sqlproj
+		SccProjectName5 = Wordnet.Database
+		SccLocalPath5 = Wordnet.Database
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8134AE3-4823-4C77-93EC-7CA7F01B53E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8134AE3-4823-4C77-93EC-7CA7F01B53E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8134AE3-4823-4C77-93EC-7CA7F01B53E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8134AE3-4823-4C77-93EC-7CA7F01B53E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871C547D-3D93-4E21-B8B9-89F671541D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871C547D-3D93-4E21-B8B9-89F671541D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871C547D-3D93-4E21-B8B9-89F671541D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871C547D-3D93-4E21-B8B9-89F671541D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762E12CC-37DA-48C8-82F7-DD0BF310D8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762E12CC-37DA-48C8-82F7-DD0BF310D8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762E12CC-37DA-48C8-82F7-DD0BF310D8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762E12CC-37DA-48C8-82F7-DD0BF310D8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AEE40D4-98CE-4365-994B-6883420C1BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AEE40D4-98CE-4365-994B-6883420C1BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AEE40D4-98CE-4365-994B-6883420C1BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AEE40D4-98CE-4365-994B-6883420C1BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71273E9E-A192-493A-A9B3-16C6467EA5B5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

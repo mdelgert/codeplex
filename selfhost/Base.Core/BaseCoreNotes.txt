@@ -1,0 +1,8 @@
+﻿Install-Package Microsoft.AspNet.WebApi -Version 4.0.30506
+Install-Package Microsoft.AspNet.WebApi.SelfHost -Version 4.0.20710
+Install-Package Microsoft.AspNet.Razor -Version 2.0.20715
+Install-Package RazorEngine -Version 3.1.0
+
+https://razorengine.codeplex.com/
+https://www.nuget.org/packages/RazorEngine/3.1.0
+http://blogs.msdn.com/b/hongyes/archive/2012/03/12/using-razor-template-engine-in-web-api-self-host-application.aspx

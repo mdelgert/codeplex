@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "KendoUI - Demos";
+}
+
+@section head {
+    @Styles.Render(
+    "~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/styles/kendo.common.min.css",
+            "~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/styles/kendo.default.min.css")
+}
+
+<h3>Sample grid one.</h3>
+
+<p>In this example grid data source from javascript data.</p>
+
+<div id="grid"></div>
+
+@section scripts {
+
+    @Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/js/kendo.web.min.js")
+
+    <script>
+        var people = [{ firstName: "John", lastName: "Smith", email: "john.smith@telerik.com" }, { firstName: "Jane", lastName: "Smith", email: "jane.smith@telerik.com" }, { firstName: "Josh", lastName: "Davis", email: "josh.davis@telerik.com" }, { firstName: "Cindy", lastName: "Jones", email: "cindy.jones@telerik.com" }];
+        $("#grid").kendoGrid({
+            dataSource: people
+        })
+    </script>
+}

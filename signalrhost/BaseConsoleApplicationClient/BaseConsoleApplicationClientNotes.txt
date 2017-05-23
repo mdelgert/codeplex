@@ -1,0 +1,8 @@
+﻿The Console Client - http://damienbod.wordpress.com/2013/11/01/signalr-messaging-with-console-server-and-client-web-client-wpf-client/
+
+SIGNALR MESSAGING A COMPLETE CLIENT WITH A CONSOLE APPLICATION - http://damienbod.wordpress.com/2013/11/13/signalr-messaging-a-complete-client-with-a-console-application/
+
+SignalRMessagingErrorHandling - https://github.com/damienbod/SignalRMessagingErrorHandling
+
+PM> Install-Package Microsoft.AspNet.SignalR.Client
+PM> Install-Package Microsoft.AspNet.SignalR.Core

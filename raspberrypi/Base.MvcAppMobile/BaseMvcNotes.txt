@@ -1,0 +1,4 @@
+﻿For Mono remove references and cleanup web.config 
+
+Entity framework
+Set Microsoft.Web.Infrastructure copy local = false

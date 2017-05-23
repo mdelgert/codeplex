@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Geo Location";
+}
+
+<h2>@ViewBag.Message</h2>
+
+<script type="text/javascript">
+
+    var x = document.getElementById("demo");
+
+    function showLocation(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        alert("Latitude : " + latitude + " Longitude: " + longitude);
+    }
+
+    function errorHandler(err) {
+        if (err.code == 1) {
+            alert("Error: Access is denied!");
+        } else if (err.code == 2) {
+            alert("Error: Position is unavailable!");
+        }
+    }
+
+    function getLocation1() {
+
+        if (navigator.geolocation) {
+            // timeout at 60000 milliseconds (60 seconds)
+            var options = { timeout: 60000 };
+            navigator.geolocation.getCurrentPosition(showLocation,
+                                                     errorHandler,
+                                                     options);
+        } else {
+            alert("Sorry, browser does not support geolocation!");
+        }
+    }
+
+    function LoopLocation() {
+        for (var i = 0; i < 20; i++) {
+            if (navigator.geolocation) {
+                setInterval(function () { navigator.geolocation.getCurrentPosition(showPosition1) }, 1000);
+            }
+            else { x.innerHTML = "Geolocation is not supported by this browser."; }
+        }
+    }
+
+    function showPosition1(position) {
+        updateClock();
+        x.innerHTML = "<br/>Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function updateClock() {
+        // Gets the current time
+        var now = new Date();
+
+        // Get the hours, minutes and seconds from the current time
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        // Format hours, minutes and seconds
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        // Gets the element we want to inject the clock into
+        var elem = document.getElementById('clock');
+
+        // Sets the elements inner HTML value to our clock data
+        elem.innerHTML = 'Clock:' + hours + ':' + minutes + ':' + seconds;
+    }
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        }
+        else { x.innerHTML = "Geolocation is not supported by this browser."; }
+    }
+
+    function showPosition(position) {
+        var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+        var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+        + latlon + "&zoom=14&size=400x300&sensor=false";
+        document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+
+</script>
+
+
+<input type="button" onclick="getLocation1()" value="Get" />
+<input type="button" onclick="LoopLocation()" value="Loop" />
+<input type="button" onclick="getLocation()" value="Map" />
+<div id="mapholder"></div>
+<p id="clock"></p>
+<p id="demo"></p>
+

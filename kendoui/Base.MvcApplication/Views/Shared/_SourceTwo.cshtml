@@ -1,0 +1,56 @@
+﻿@*Original from KendoUI examples see _SourceKendoUI.cshtml version modified*@
+
+@Styles.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/styles/examples-offline.css")
+
+@{
+
+    //.cshtml not returning on AppHarbor
+    var routeData = ViewContext.RouteData;
+    var controllerName = routeData.GetRequiredString("controller");
+    var viewName = routeData.GetRequiredString("action");
+    var controllerPath = Server.MapPath("~/Controllers/" + controllerName + "Controller.cs");
+
+    string controllerSource = "";
+
+    if (System.IO.File.Exists(controllerPath))
+    {
+        controllerSource = System.IO.File.ReadAllText(controllerPath);
+    }
+
+}
+
+<div class="container">
+    <div class="sourceX">
+        <h3>Source:</h3>
+        <div class="codeX">
+            <pre class="prettyprint controller">@controllerSource</pre>
+            <pre class="prettyprint view"></pre>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/console.js")
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/prettify.js")
+
+<script>
+
+    var serviceUrl = '/KendoUI/SampleEditorOne';
+    var method = 'GET';
+
+
+    $(function () {
+        
+        $.ajax({
+            type: method,
+            url: serviceUrl
+        }).done(function (data) {
+            $(".sourceX .codeX").find(".view").text(data);
+
+            prettyPrint();
+        }).error(function (jqXHR, textStatus, errorThrown) {
+            $(".source .code").find(".view").text(jqXHR.responseText || textStatus);
+        });
+
+    });
+
+</script>

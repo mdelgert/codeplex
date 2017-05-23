@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Task - Index";
+}
+
+<div class="page-header">
+    <h3>Task item CRUD operations.</h3>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Create", "TaskItem")'">Create</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Read", "TaskItem")'">Read</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Update", "TaskItem")'">Update</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Delete", "TaskItem")'">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+Area to copy Visual Studio default styles and js for manually adding them.

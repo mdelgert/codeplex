@@ -1,0 +1,38 @@
+﻿Clock
+http://www.c-sharpcorner.com/blogs/7066/standard-scroll-clock-using-javascript.aspx
+http://www.tristanwaddington.com/2010/08/javascript-clock/comment-page-1/
+
+Geo Location
+http://www.tutorialspoint.com/html5/geolocation_getcurrentposition.htm
+<a id="takePhotoButton" data-role="button">Take Photo</a>
+http://www.w3schools.com/html/html5_geolocation.asp
+http://www.w3schools.com/js/js_timing.asp
+
+Picture
+http://www.html5gamedevs.com/2012/04/09/pictures-camera-api-part-webapi/
+https://hacks.mozilla.org/2012/04/taking-pictures-with-the-camera-api-part-of-webapi/
+https://github.com/pinehead/jQuery-Mobile-Amazon-S3-Picture-Uploader/blob/master/index.php
+http://www.jefflinwood.com/2011/07/building-a-jquery-mobile-html5-app-with-phonegap-for-drupal-7-part-2/
+http://www.uploadify.com/demos/
+<a id="takePhotoButton" data-role="button">Take Photo</a>
+
+
+Original Code
+
+To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>
+
+        <div data-role="header">
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <h1>@ViewBag.Title</h1>
+                @Html.Partial("_LoginPartial")
+            }
+        </div>
+
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    

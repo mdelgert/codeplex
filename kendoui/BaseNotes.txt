@@ -1,0 +1,117 @@
+JayData - http://jaydata.org/, https://www.nuget.org/packages/JayData/
+
+How to use JayData with ASP.NET Web API - I - http://jaydata.org/blog/how-to-use-jaydata-with-asp.net-web-api---i
+
+JayData 1.3.5 - https://www.nuget.org/packages/JayData/
+
+JSLQ playground - http://jslq.spirit.de/
+
+With our online SQL editor, you can edit the SQL statements, and click on a button to view the result. - http://www.w3schools.com/sql/
+
+Create SQLite Off-Line Database and Insert,Update,Delete,Drop Operations in SQLite using JQuery ,HTML5 Inputs. - http://tejasrpatel.wordpress.com/2011/12/29/create-sqlite-off-line-database-and-insertupdatedeletedrop-operations-in-sqlite-using-jquery-html5-inputs/
+
+Databases on the client side - http://the-jquerymobile-tutorial.org/jquery-mobile-tutorial-CH22.php
+
+A Simple TODO list using HTML5 WebDatabases - http://www.html5rocks.com/en/tutorials/webdatabase/todo/
+
+ADO.NET 2.0 Provider for SQLite - http://sourceforge.net/projects/sqlite-dotnet2/files/SQLite%20for%20ADO.NET%202.0/
+
+Using Razor Template Engine in Web API Self Host Application - http://blogs.msdn.com/b/hongyes/archive/2012/03/12/using-razor-template-engine-in-web-api-self-host-application.aspx
+
+                // This is causing error in IE need to look into this.
+                //    .error(function (jqXHR, textStatus, errorThrown) {
+                //    $('#ErrorResult').text(jqXHR.responseText || textStatus);
+                //    $("#ErrorAlert").alert();
+                //    $("#DebugAlert").alert();
+                //});
+
+50 Must-have plugins for extending Twitter Bootstrap - http://tutorialzine.com/2013/07/50-must-have-plugins-for-extending-twitter-bootstrap/
+
+Fuel UX extends Bootstrap with additional lightweight JavaScript controls. - http://exacttarget.github.io/fuelux/#
+
+DataTables - https://datatables.net/
+
+jQuery UI TinyTable - http://www.michaelkeck.de/projects/jquery/tinytbl/
+
+Bootstrap Paginator v 1.0 - http://bootstrappaginator.org/
+
+Make use of Bootstrap's modal more monkey-friendly. - http://nakupanda.github.io/bootstrap3-dialog/
+
+#################################################################################################################################################
+
+Cors - https://forum.jquery.com/topic/cross-domain-requests-with-support-cors-and-mobile-allowcrossdomainpages, http://stackoverflow.com/questions/7852225/is-it-safe-to-use-support-cors-true-in-jquery
+
+            $.ajax({
+                type: method,
+                url: uri,
+                crossDomain: true,
+            }).done(function (data) {
+                $('#value1').text(data);
+            }).error(function (jqXHR, textStatus, errorThrown) {
+                $('#value1').text(jqXHR.responseText || textStatus);
+            });
+
+
+   function GetAllEmployees() {
+        jQuery.support.cors = true; <----------------------
+        $.ajax({
+            url: 'http://localhost:8080/API_SVC/api/EmployeeAPI',
+            type: 'GET',
+            dataType: 'json',            
+            success: function (data) {                
+                WriteResponse(data);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });        
+    }
+
+Cross Domain WebApi Sample - http://www.telerik.com/support/code-library/cross-domain-webapi-sample
+
+CORS, ASP.NET Web API, Kendo UI - http://stackoverflow.com/questions/13869893/cors-asp-net-web-api-kendo-ui
+
+Cross Domain - http://www.telerik.com/forums/cross-domain
+
+#################################################################################################################################################
+
+Northwindextended - https://code.google.com/p/northwindextended/downloads/list
+
+Implementing & Consuming ASP.NET WEB API from JQuery (MVC 4) - http://www.codeproject.com/Articles/424461/Implementing-Consuming-ASP-NET-WEB-API-from-JQuery
+
+Using Kendo UI Grid with Web API Controller in ASP.Net Web Form - http://www.studyoverflow.org/2013/07/using-kendo-ui-grid-with-web-api.html
+
+Multiple Simultaneous Ajax Requests (with one callback) in jQuery - http://css-tricks.com/multiple-simultaneous-ajax-requests-one-callback-jquery/
+
+jQuery: Execute/Run Multiple Ajax Requests Simultaneously - http://www.codeproject.com/Articles/599349/jQuery-Execute-Run-Multiple-Ajax-Requests-Simultan
+
+Calling the Web API with Javascript and jQuery - http://docs.telerik.com/data-access/quick-start-scenarios/asp.net-web-api/quickstart-webapi-call-from-javascript-jquery
+
+ServiceStack's new HTML powers - the website framework - http://razor.servicestack.net/, https://github.com/ServiceStack/RazorRockstars
+
+ServiceStack - https://github.com/ServiceStack
+
+Links
+
+Kendo UI Web - http://www.telerik.com/download/kendo-ui-web, http://www.telerik.com/download/kendo-ui-web-open-source
+
+Kendo UI Labs - http://kendoui-labs.telerik.com/
+
+Bootstrap - https://github.com/twbs/bootstrap, http://getbootstrap.com/
+
+jQuery - http://jquery.com/
+
+jQuery UI - https://jqueryui.com/
+
+jQuery Mobile - http://jquerymobile.com/
+
+HTML5 Shiv - http://www.jsdelivr.com/, https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js, https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js
+
+Light IIS (Run Asp.net without IIS) - http://www.codeproject.com/Articles/23939/Light-IIS-Run-Asp-net-without-IIS
+
+A powerful HTTP client to test web services - http://www.getpostman.com/
+
+A Beginner's Tutorial on ASP.NET WebApi Hosting(IIS Hosting and Self Hosting) - http://www.codeproject.com/Articles/702747/A-Beginners-Tutorial-on-ASP-NET-WebApi-Hosting-IIS
+
+Self-Hosting in ASP.Net Web API - http://www.c-sharpcorner.com/UploadFile/2b481f/self-hosting-in-Asp-Net-web-api/
+

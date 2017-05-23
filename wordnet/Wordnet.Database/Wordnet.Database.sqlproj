@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Wordnet.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{71273e9e-a192-493a-a9b3-16c6467ea5b5}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Wordnet.Database</RootNamespace>
+    <AssemblyName>Wordnet.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="WordNetSQLQueries" />
+    <Folder Include="SchemaCompare" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="WordNetSQLQueries\Definition-simple.sql" />
+    <Build Include="WordNetSQLQueries\hypernyms of noun horse.sql" />
+    <Build Include="WordNetSQLQueries\hyponyms of noun horse.sql" />
+    <Build Include="WordNetSQLQueries\Synonyms-Hypernyms of noun horse.sql" />
+    <Build Include="WordNetSQLQueries\verbnet syntax for verb guide.sql" />
+    <Build Include="WordNetSQLQueries\verbnet thematic roles for verb accompany.sql" />
+    <Build Include="WordNetSQLQueries\verbnet thematic roles for verb guide.sql" />
+    <Build Include="WordNetSQLQueries\xwordnet lft for verb guide.sql" />
+    <Build Include="WordNetSQLQueries\xwordnet parses for verb guide.sql" />
+    <Build Include="WordNetSQLQueries\xwordnet wsd for verb guide.sql" />
+    <Build Include="dbo\Tables\xwnwsd.sql" />
+    <Build Include="dbo\Tables\xwnparselft.sql" />
+    <Build Include="dbo\Tables\wordposition.sql" />
+    <Build Include="dbo\Tables\word.sql" />
+    <Build Include="dbo\Tables\vnselrestrref.sql" />
+    <Build Include="dbo\Tables\vnselrestrdef.sql" />
+    <Build Include="dbo\Tables\vnroleref.sql" />
+    <Build Include="dbo\Tables\vnroledef.sql" />
+    <Build Include="dbo\Tables\vnframeref.sql" />
+    <Build Include="dbo\Tables\vnframedef.sql" />
+    <Build Include="dbo\Tables\vnexampleref.sql" />
+    <Build Include="dbo\Tables\vnexampledef.sql" />
+    <Build Include="dbo\Tables\synset.sql" />
+    <Build Include="dbo\Tables\sentenceref.sql" />
+    <Build Include="dbo\Tables\sentencedef.sql" />
+    <Build Include="dbo\Tables\sense.sql" />
+    <Build Include="dbo\Tables\semlinkref.sql" />
+    <Build Include="dbo\Tables\sample.sql" />
+    <Build Include="dbo\Tables\morphref.sql" />
+    <Build Include="dbo\Tables\morphdef.sql" />
+    <Build Include="dbo\Tables\linkdef.sql" />
+    <Build Include="dbo\Tables\lexlinkref.sql" />
+    <Build Include="dbo\Tables\legacy.sql" />
+    <Build Include="dbo\Tables\frameref.sql" />
+    <Build Include="dbo\Tables\framedef.sql" />
+    <Build Include="dbo\Tables\categorydef.sql" />
+    <Build Include="dbo\Tables\casedword.sql" />
+    <Build Include="dbo\Stored Procedures\LookupWordTwo.sql" />
+    <Build Include="dbo\Stored Procedures\LookupWordOne.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WordNetSQLQueries\readme.txt" />
+    <None Include="WordNetSQLServer.7z" />
+    <None Include="SchemaCompare\LocalToProject.scmp" />
+  </ItemGroup>
+</Project>

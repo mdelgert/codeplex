@@ -1,0 +1,143 @@
+Galileo2 Setup
+
+$su
+
+#apt-get update
+
+#apt-get upgrade
+
+#apt-get install gawk wget git-core diffstat unzip texinfo \
+     build-essential chrpath libsdl1.2-dev xterm
+
+#apt-get install p7zip-full
+
+#exit
+
+$wget http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+
+$7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+
+$tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+
+$cd meta-clanton_v0.7.5
+
+$./setup.sh
+
+To help conserve disk space during builds, you can add the following statement to your project's configuration file, which for this example is poky-dora-10.0.0/build/conf/local.conf. Adding this statement deletes the work directory used for building a package once the package is built.
+
+$nano /home/mdelgert/meta-clanton_v0.7.5/yocto_build/conf/local.conf
+
+#Add to EOF
+INHERIT += "rm_work"
+
+$source poky/oe-init-build-env yocto_build
+
+$bitbake image-full
+
+Intel Galileo - Building Linux Image - http://www.malinov.com/Home/sergey-s-blog/intelgalileo-buildinglinuximage
+
+posted Oct 24, 2013, 5:17 PM by Sergey Kiselev   [ updated Oct 27, 2013, 2:27 PM ]
+As I mentioned in my previous post the capabilities in Intel provided SD-based Linux image is somehow limited. Fortunately the image is built using Yocto Project embedded Linux build system and Intel provides all files necessary to rebuild the Linux image. Here I will describe how to do that.
+Prerequisites
+
+Intel Galileo Board (well, not really needed for the build process, but you want to run the image somewhere, right?). Update the boards' firmware. Older firmware has a bug that prevents booting from SD card.
+A computer with a fairly new Linux distribution installed on it. I used Ubuntu 12.04.
+Development tools, GCC compiler, etc. You'll also need 7zip utility. Debian/Ubuntu people do:
+sudo apt-get install build-essential p7zip-full
+70GB or so available space on the hard drive.
+Fairly fast Internet connection. It is going to download all the sources required for the image from the Internet.
+A few hours to complete the build process. This will depend on the performance of your computer and the Internet connection speed.
+Basic Steps to Rebuild The Image
+
+Create a directory you'll be using for the build process. Do not use spaces in the directory name. Yocto doesn't like them. 
+Download "Board Support Package Sources for Intel Quark" from https://communities.intel.com/community/makers/software/drivers. And copy it to your build directory. In my case the file was named Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z.
+Unzip the file:
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+Unzip meta-clanton_v0.7.5.tar.gz:
+tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+Change directory to meta-clanton_v0.7.5:
+cd meta-clanton_v0.7.5
+Run setup.sh:
+./setup.sh
+Source poky/oe-init-build-env script, giving it the build directory (yocto_build) as a parameter:
+source poky/oe-init-build-env yocto_build
+Run bitbake to build the image:
+bitbake image-full
+Note: image-full - SD card image, image-spi - SPI flash image.
+Wait several hours, and if everything goes well you'll get your image in tmp/deploy/images/ directory. It will include:
+The Linux kernel: bzImage--3.8-r0-clanton-YYYYMMDDhhmmss.bin (YYYYMMDDhhmmss - timestamp indicating the build start time)
+Initial RAM FS: core-image-minimal-initramfs-clanton-YYYYMMDDhhmmss.rootfs.cpio.gz
+File system image: image-full-clanton-YYYYMMDDhhmmss.rootfs.ext3
+Kernel modules: modules--3.8-r0-clanton-YYYYMMDDhhmmss.tgz (not really needed, they are already in the file system image)
+Grub configuration: boot/grub/grub.conf
+Copy these files to SD card renaming files as follows (resulting paths are relative to SD card's root):
+bzImage--3.8-r0-clanton-YYYYMMDDhhmmss.bin -> bzImage
+core-image-minimal-initramfs-clanton-YYYYMMDDhhmmss.rootfs.cpio.gz -> core-image-minimal-initramfs-clanton.cpio.gz
+image-full-clanton-YYYYMMDDhhmmss.rootfs.ext3 -> image-full-clanton.ext3
+boot/grub/grub.conf -> boot/grub/grub.conf
+Note that you can keep names or use different names for all files except of the image-full-clanton.ext3, and just update grub.conf with the correct names. The file system image must be named image-full-clanton.ext3 (initramfs will look for that) unless you update the configuration.
+Insert SD card to your Galileo board, reboot it, and enjoy!
+Building Linux Standard Base (LSB) Image
+
+In my case I wanted to get an LSB (Linux Standard Base) compatible image, with development tools installed on it, and USB audio support. I choose to use Poky core-image-lsb-sdk image profile as it includes all the stuff I needed. (Poky is a Yocto project reference distribution.) 
+
+The instructions below assume that you already done steps 1 - 7 above, and you are in meta-clanton_v0.7.5/yocto_build/ directory.
+Update local.conf
+
+Edit conf/local.conf. We will want to use to use eglibc instead of uClibc (LSB requires eglibc/glibc). Set DISTRO to clanton-full:
+DISTRO ?= "clanton-full"
+Note that supplied Arduino IDE cross compiles sketches with uClibc and they will not work with eglibc.
+
+You might also want to tweak BB_NUMBER_THREADS and PARALLEL_MAKE variables. Increase numbers if you have a computer with many cores or processors to speed up compilation process. I would recommend having 2-3 threads per core. The default configuration is OK for a dual or quad core processor system.
+Comment out uClibc patch for v4l2apps
+
+Edit ../meta-clanton-distro/recipes-multimedia/v4l2apps/v4l-utils_0.8.8.bbappend, prepend each line with a hash (#) sign:
+#FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+#SRC_URI += "file://uclibc-enable.patch"
+#DEPENDS += "libiconv"
+Create recipe for the image
+
+Copy ../meta-clanton-distro/recipes-core/images/image-full.bb  file to ../meta-clanton-distro/recipes-core/images/image-sdk.bb:
+
+cp ../meta-clanton-distro/recipes-core/images/image-full.bb to ../meta-clanton-distro/recipes-core/images/image-sdk.bb
+Edit ../meta-clanton-distro/recipes-core/images/image-sdk.bb file. Append packagegroup-core-basic packagegroup-core-lsb kernel-dev to IMAGE_INSTALL:
+
+IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL} packagegroup-core-basic packagegroup-core-lsb kernel-dev"
+
+
+Append tools-sdk dev-pkgs tools-debug eclipse-debug tools-profile tools-testapps debug-tweaks to IMAGE_FEATURES:
+IMAGE_FEATURES += "package-management tools-sdk dev-pkgs tools-debug eclipse-debug tools-profile tools-testapps debug-tweaks"
+You might also want to increase root file system size from the 300 MB default to 3 GB or so. If configured as described here image will use about 1.5GB so with 3 GB you'll have plenty of space for other things.
+
+IMAGE_ROOTFS_SIZE = "3072000"
+Other Changes
+
+I made a couple more tweaks to the image. First is an update to Galileo kernel patch to fix an issue with CY8C9540A I/O expander. By default intel_cln_gip module configures Intel Quark to use I2C fast mode, and CY8C9540A doesn't want to work with that mode. So the change is to make standard mode default. Find +static unsigned int i2c_std_mode; line in ../meta-clanton-bsp/recipes-kernel/linux/files/clanton.patch file and assign 1 to that variable (add = 1 before semicolon):
+
++static unsigned int i2c_std_mode = 1;
+Another patch is to allow configurable file system image file name. So that I can have multiple file system images on one SD card, and switch between them easily using GRUB menu. The patch is attached to this blog (rootimage.patch). Copy it to ../meta-clanton-distro/recipes-core/initrdscripts/files/ directory and add SRC_URI += "file://rootimage.patch;patchdir=${WORKDIR}" line to ../meta-clanton-distro/recipes-core/initrdscripts/initramfs-live-boot_1.0.bbappend file:
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+SRC_URI += "file://name.patch;patchdir=${WORKDIR}"
+SRC_URI += "file://rootimage.patch;patchdir=${WORKDIR}"
+Once this patch is applied you can use rootimage=<filename>.ext3 option in the kernel command line in grub.conf to specify the root file system image file name. For example:
+
+title Clanton SDK
+    root (hd0,0)
+    kernel /bzImage--3.8-r0-clanton-20131027083753.bin root=/dev/ram0 console=ttyS1,115200n8 earlycon=uart8250,mmio32,0x8010f000,115200n8 reboot=efi,warm apic=debug rw LABEL=boot debugshell=5 rootimage=image-sdk-clanton-20131027083753.rootfs.ext3
+    initrd /core-image-minimal-initramfs-clanton-20131027083753.rootfs.cpio.gz
+Reconfigure kernel, enable whatever features you like
+
+bitbake linux-yocto-clanton -c menuconfig
+Build the image
+
+bitbake image-sdk
+For information more information on available image profiles, see the "Images" chapter in the Yocto Project Reference Manual.
+
+Install the image
+
+Follow steps 9 - 11 above to install the image on the SD card.
+
+Files and patches
+
+For your convenience I attached a tarball which includes files with all the modifications described above and my kernel configuration with USB audio enabled. You can simply unpack it in to your build directory (one with meta-clanton_v0.7.5/ directory). 

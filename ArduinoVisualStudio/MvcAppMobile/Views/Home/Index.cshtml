@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Door";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    @*To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.*@
+</p>
+
+@*<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="c" data-count-theme="a">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Dog Door", "DogDoor", "Home")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+</ul>*@
+
+<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="c" data-count-theme="a">
+    <li data-role="list-divider"></li>
+    <li>@Html.ActionLink("Open", "DogDoorOpen", "Home")</li>
+    <li>@Html.ActionLink("Close", "DogDoorClose", "Home")</li>
+</ul>

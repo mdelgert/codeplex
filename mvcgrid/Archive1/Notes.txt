@@ -1,0 +1,28 @@
+For AppHarbor support added Dlls EntityFramework.dll set confirguration manager to not build DB project
+
+
+
+The specified default EntityContainer name 'EntitiesContext' could not be found in the mapping and metadata information.
+Parameter name: defaultContainerName
+
+http://forums.asp.net/t/1588317.aspx/1
+Re: EntityFramework Error
+Aug 11, 2010 01:47 AM|LINK
+
+I got this error when upgrading from RC1 of Visual Studio 2010 and the .NET Framework 4.0 RC1, to the RTM version of both. The fix is simple, very simple; simple add the outlined markup to your web.config file.
+
+<configuration>
+  ...
+  <system.web>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+      <buildProviders>
+        <add extension=".edmx" type="System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider" />
+      </buildProviders>
+    </compilation>
+  </system.web>
+</configuration>

@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Task - ReadAll";
+}
+
+<div class="page-header">
+    <h3>Task CRUD operations.</h3>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <label for="taskId">Search by task id.</label>
+                <input type="text" class="form-control" value="1" id="taskId" placeholder="Enter Task Id">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="find();">Search</button>
+            </div>
+            <div class="form-group">
+                <label for="task">Search result.</label>
+                <br />
+                <span id='task'></span>
+            </div>
+
+            <hr />
+            <div class="form-group">
+                <label for="tasks">All tasks.</label>
+                <span id='tasks'></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+
+        var uri = '/CoreApi/Task';
+        //var uri = 'http://kendoui.apphb.com/CoreApi/Task';
+       
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of tasks.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the task.
+                        //$('<li>', { text: formatItem(item) }).appendTo($('#tasks'));
+                        $('<p>', { text: formatItem(item) }).appendTo($('#tasks'));
+                    });
+                });
+        });
+
+        function formatItem(item) {
+            return item.TaskID + ' ' + item.TaskName;
+        }
+
+        function find() {
+            var TaskID = $('#taskId').val();
+            $.getJSON(uri + '?taskId=' + TaskID)
+                .done(function (data) {
+                    $('#task').text(formatItem(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#task').text('Error: ' + err);
+                });
+        }
+
+
+    </script>
+}

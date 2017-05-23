@@ -1,0 +1,9 @@
+Nuget Notes
+Base.DataAccessLayer -- Command: Install-Package EntityFramework -- Result: Successfully added 'EntityFramework 5.0.0' to Base.DataAccessLayer.
+Base.DataAccessLayer -- Command: Install-Package CommunityEFProviderWrappers.EFTracingProvider Result: Successfully installed 'CommunityEFProviderWrappers.EFProviderWrapperToolkit 1.0.0'., Successfully installed 'CommunityEFProviderWrappers.EFTracingProvider 1.0.0'., Successfully added 'CommunityEFProviderWrappers.EFProviderWrapperToolkit 1.0.0' to Base.DataAccessLayer., Successfully added 'CommunityEFProviderWrappers.EFTracingProvider 1.0.0' to Base.DataAccessLayer.
+
+Enity Framework Links
+http://www.devproconnections.com/article/entity-framework/entity-framework-schema-141882
+http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm
+http://nuget.org/packages/CommunityEFProviderWrappers.EFTracingProvider
+http://efwrappers.codeplex.com/

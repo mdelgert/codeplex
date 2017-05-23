@@ -1,0 +1,37 @@
+﻿
+//http://www.nuget.org/packages/ARSoft.Tools.Net/
+//https://docs.ar-soft.de/arsoft.tools.net/
+https://arsofttoolsnet.codeplex.com/
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    using (DnsServer server = new DnsServer(IPAddress.Any, 10, 10, ProcessQuery))
+    {
+      server.Start();
+      Console.WriteLine("Press any key to stop server");
+      Console.ReadLine();
+    }
+  }
+ 
+  static DnsMessageBase ProcessQuery(DnsMessageBase message, IPAddress clientAddress, ProtocolType protocol)
+  {
+    message.IsQuery = false;
+    DnsMessage query = message as DnsMessage;
+    // check for valid query
+    if ((query != null)
+      && (query.Questions.Count == 1)
+      && (query.Questions[0].RecordType == RecordType.Txt)
+      && (query.Questions[0].Name.Equals("example.com", StringComparison.InvariantCultureIgnoreCase)))
+    {
+      query.ReturnCode = ReturnCode.NoError;
+      query.AnswerRecords.Add(new TxtRecord("example.com", 3600, "Hello world"));
+    }
+    else
+    {
+      message.ReturnCode = ReturnCode.ServerFailure;
+    }
+    return message;
+  }
+}

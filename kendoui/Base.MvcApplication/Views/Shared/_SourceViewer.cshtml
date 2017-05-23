@@ -1,0 +1,46 @@
+﻿
+
+<div class="container">
+    <div class="page-header">
+        <h3>Source Viewer</h3>
+    </div>
+    <br />
+    <div class="divCSharpCodeViewer">
+        <h3>C#</h3>
+        <pre class="prettyprint controller"></pre>
+    </div>
+    <div class="divHTMLCodeViewer">
+        <h3>HTML</h3>
+        <pre class="prettyprint view"></pre>
+    </div>
+
+</div>
+
+@Styles.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/styles/examples-offline.css")
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/console.js")
+@Scripts.Render("~/Content/KendoUI/telerik.kendoui.web.2014.1.318.open-source/examples/content/shared/js/prettify.js")
+
+@{
+    var routeData = ViewContext.RouteData;
+    var controllerName = routeData.GetRequiredString("controller");
+    var viewName = routeData.GetRequiredString("action");
+
+    <script>
+
+        //########################################### Source code viewer script skip code copy ###########################################
+
+        //Return and make the code pretty for viewing. -- Original from KendoUI MVC examples see _SourceKendoUI.cshtml version.
+        $(document).ready(function () {
+            $.get('/CoreApi/CodeView/get?controller=' + '@controllerName', function (controller) {
+                $.get('/@controllerName/@viewName', function (view) {
+                    $(".divCSharpCodeViewer").find(".controller").text(controller);
+                    $(".divHTMLCodeViewer").find(".view").text(view);
+                    prettyPrint();
+                });
+            });
+        });
+
+        //########################################### Source code viewer script skip code copy ###########################################
+
+    </script>
+}

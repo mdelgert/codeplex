@@ -1,0 +1,80 @@
+http://www.malinov.com/Home/sergey-s-blog/intelgalileo-buildinglinuximage
+https://communities.intel.com/community/makers/drivers
+https://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html
+
+sudo apt-get install build-essential p7zip-full
+source oe-init-build-env /home/mdelgert
+bitbake -k core-image-sato
+
+
+Ubuntu setup
+
+apt-get update
+apt-get upgrade
+
+apt-get install gawk wget git-core diffstat unzip texinfo \
+     build-essential chrpath libsdl1.2-dev xterm
+
+wget http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+sudo apt-get install p7zip-full
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+cd meta-clanton_v0.7.5
+./setup.sh
+
+wget http://downloads.yoctoproject.org/releases/yocto/yocto-1.5/poky-dora-10.0.0.tar.bz2
+tar xjf poky-dora-10.0.0.tar.bz2
+cd poky-dora-10.0.0
+sudo mkdir yocto_build
+sudo chmod 777 yocto_build
+cd poky-dora-10.0.0
+source oe-init-build-env yocto_build
+bitbake image-full
+
+Debian setup
+
+su
+
+apt-get update
+
+apt-get upgrade
+
+apt-get install gawk wget git-core diffstat unzip texinfo \
+     build-essential chrpath libsdl1.2-dev xterm
+
+apt-get install p7zip-full
+
+wget http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+
+tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+
+cd meta-clanton_v0.7.5
+
+./setup.sh
+
+chmod 777 yocto_build
+chmod 777 meta-clanton_v0.7.5
+
+cd ..
+
+wget http://downloads.yoctoproject.org/releases/yocto/yocto-1.5/poky-dora-10.0.0.tar.bz2
+
+tar xjf poky-dora-10.0.0.tar.bz2
+
+cd meta-clanton_v0.7.5/
+
+source poky/oe-init-build-env yocto_build
+
+nano /home/mdelgert/meta-clanton_v0.7.5/yocto_build/conf/local.conf
+
+To help conserve disk space during builds, you can add the following statement to your project's configuration file, which for this example is poky-dora-10.0.0/build/conf/local.conf. Adding this statement deletes the work directory used for building a package once the package is built.
+
+INHERIT += "rm_work"
+             
+exit 
+
+source poky/oe-init-build-env yocto_build
+
+bitbake -k core-image-sato

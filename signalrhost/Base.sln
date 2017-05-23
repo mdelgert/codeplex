@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C8346931-6A57-4887-96D8-646F79015C14}"
+	ProjectSection(SolutionItems) = preProject
+		BaseNotes.txt = BaseNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppExample1", "WebAppExample1\WebAppExample1.csproj", "{F16BCB6E-4876-41DB-96FC-9024EF37E3C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConsoleApplicationSelfHost", "BaseConsoleApplicationSelfHost\BaseConsoleApplicationSelfHost.csproj", "{F8FAB937-D9D7-4DDB-8563-06FB30600DBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConsoleApplicationClient", "BaseConsoleApplicationClient\BaseConsoleApplicationClient.csproj", "{BFC53976-301B-48A2-AC86-1292EB76355B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConsoleApplicationSelHostMono", "BaseConsoleApplicationSelHostMono\BaseConsoleApplicationSelHostMono.csproj", "{FD22ABFF-BC8B-49ED-9E08-B5EFB9DC1958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConsoleApplicationClientMono", "BaseConsoleApplicationClientMono\BaseConsoleApplicationClientMono.csproj", "{26CFAE55-A9D5-4E2E-9A5B-A83C92600347}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebAppExample1\\WebAppExample1.csproj
+		SccProjectName1 = WebAppExample1
+		SccLocalPath1 = WebAppExample1
+		SccProjectUniqueName2 = BaseConsoleApplicationSelfHost\\BaseConsoleApplicationSelfHost.csproj
+		SccProjectName2 = BaseConsoleApplicationSelfHost
+		SccLocalPath2 = BaseConsoleApplicationSelfHost
+		SccProjectUniqueName3 = BaseConsoleApplicationClient\\BaseConsoleApplicationClient.csproj
+		SccProjectName3 = BaseConsoleApplicationClient
+		SccLocalPath3 = BaseConsoleApplicationClient
+		SccProjectUniqueName4 = BaseConsoleApplicationSelHostMono\\BaseConsoleApplicationSelHostMono.csproj
+		SccProjectName4 = BaseConsoleApplicationSelHostMono
+		SccLocalPath4 = BaseConsoleApplicationSelHostMono
+		SccProjectUniqueName5 = BaseConsoleApplicationClientMono\\BaseConsoleApplicationClientMono.csproj
+		SccProjectName5 = BaseConsoleApplicationClientMono
+		SccLocalPath5 = BaseConsoleApplicationClientMono
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F16BCB6E-4876-41DB-96FC-9024EF37E3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16BCB6E-4876-41DB-96FC-9024EF37E3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16BCB6E-4876-41DB-96FC-9024EF37E3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16BCB6E-4876-41DB-96FC-9024EF37E3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FAB937-D9D7-4DDB-8563-06FB30600DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FAB937-D9D7-4DDB-8563-06FB30600DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FAB937-D9D7-4DDB-8563-06FB30600DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FAB937-D9D7-4DDB-8563-06FB30600DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC53976-301B-48A2-AC86-1292EB76355B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC53976-301B-48A2-AC86-1292EB76355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC53976-301B-48A2-AC86-1292EB76355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC53976-301B-48A2-AC86-1292EB76355B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD22ABFF-BC8B-49ED-9E08-B5EFB9DC1958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD22ABFF-BC8B-49ED-9E08-B5EFB9DC1958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD22ABFF-BC8B-49ED-9E08-B5EFB9DC1958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD22ABFF-BC8B-49ED-9E08-B5EFB9DC1958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26CFAE55-A9D5-4E2E-9A5B-A83C92600347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26CFAE55-A9D5-4E2E-9A5B-A83C92600347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26CFAE55-A9D5-4E2E-9A5B-A83C92600347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26CFAE55-A9D5-4E2E-9A5B-A83C92600347}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

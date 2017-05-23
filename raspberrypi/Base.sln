@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplication", "Base.ConsoleApplication\Base.ConsoleApplication.csproj", "{2ACF3D5E-E883-4032-B579-F4159104970C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C59DCC9-901A-44FB-9E99-11F9AA3047B8}"
+	ProjectSection(SolutionItems) = preProject
+		Pictures\1.jpg = Pictures\1.jpg
+		BaseNotes.txt = BaseNotes.txt
+		License.txt = License.txt
+		MonoDevelop3.0.3.2ReleaseNotes.txt = MonoDevelop3.0.3.2ReleaseNotes.txt
+		RaspberryPiSetupNotes.txt = RaspberryPiSetupNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcAppTest2", "Base.MvcAppTest2\Base.MvcAppTest2.csproj", "{54BC487F-9845-4311-979E-0ECF875B52DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcAppTest3", "Base.MvcAppTest3\Base.MvcAppTest3.csproj", "{066DE2B5-B30E-4DA7-8D62-2C878042DC93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcAppTest4", "Base.MvcAppTest4\Base.MvcAppTest4.csproj", "{178839E2-1E76-4802-845C-C5AD5DB7EC35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcAppMobile", "Base.MvcAppMobile\Base.MvcAppMobile.csproj", "{A2E44266-CB30-488F-BA18-419E08A60F2A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Blink", "ArduinoBlink\Blink\Blink.vcxproj", "{A578DE66-320A-4F06-951A-0DEEE6924E61}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Base.ConsoleApplication\\Base.ConsoleApplication.csproj
+		SccProjectName1 = Base.ConsoleApplication
+		SccLocalPath1 = Base.ConsoleApplication
+		SccProjectUniqueName2 = Base.MvcAppTest2\\Base.MvcAppTest2.csproj
+		SccProjectName2 = Base.MvcAppTest2
+		SccLocalPath2 = Base.MvcAppTest2
+		SccProjectUniqueName3 = Base.MvcAppTest3\\Base.MvcAppTest3.csproj
+		SccProjectName3 = Base.MvcAppTest3
+		SccLocalPath3 = Base.MvcAppTest3
+		SccProjectUniqueName4 = Base.MvcAppTest4\\Base.MvcAppTest4.csproj
+		SccProjectName4 = Base.MvcAppTest4
+		SccLocalPath4 = Base.MvcAppTest4
+		SccProjectUniqueName5 = Base.MvcAppMobile\\Base.MvcAppMobile.csproj
+		SccProjectName5 = Base.MvcAppMobile
+		SccLocalPath5 = Base.MvcAppMobile
+		SccProjectUniqueName6 = ArduinoBlink\\Blink\\Blink.vcxproj
+		SccProjectName6 = ArduinoBlink/Blink
+		SccLocalPath6 = ArduinoBlink\\Blink
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2ACF3D5E-E883-4032-B579-F4159104970C}.Release|Win32.ActiveCfg = Release|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{54BC487F-9845-4311-979E-0ECF875B52DC}.Release|Win32.ActiveCfg = Release|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{066DE2B5-B30E-4DA7-8D62-2C878042DC93}.Release|Win32.ActiveCfg = Release|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{178839E2-1E76-4802-845C-C5AD5DB7EC35}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A2E44266-CB30-488F-BA18-419E08A60F2A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Debug|Win32.Build.0 = Debug|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Release|Any CPU.ActiveCfg = Release|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Release|Win32.ActiveCfg = Release|Win32
+		{A578DE66-320A-4F06-951A-0DEEE6924E61}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

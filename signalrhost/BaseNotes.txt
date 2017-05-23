@@ -1,0 +1,30 @@
+Example 1: Tutorial: Getting Started with SignalR 2.0 - http://www.asp.net/signalr/overview/signalr-20/getting-started-with-signalr-20/tutorial-getting-started-with-signalr-20
+
+
+
+PM> Install-Package Prettify
+
+https://code.google.com/p/google-code-prettify/wiki/GettingStarted
+http://google-code-prettify.googlecode.com/svn/trunk/README.html
+
+How to add line numbers to all lines in Google Prettify? - http://stackoverflow.com/questions/8399547/how-to-add-line-numbers-to-all-lines-in-google-prettify
+
+"Bootstrap-light" Theme - http://demo.stanleyhlng.com/prettify-js/?id=bootstrap-light, http://www.opinionatedgeek.com/DotNet/Tools/HTMLEncode/encode.aspx, http://www.nuget.org/packages/Prettify/3.3.4.2013
+
+HTML Encoder - http://www.opinionatedgeek.com/DotNet/Tools/HTMLEncode/encode.aspx
+
+CSSUnpacker.com - http://cssunpacker.com/
+
+HTML Color Names - http://www.w3schools.com/html/html_colornames.asp
+
+HTML Colors - http://www.w3schools.com/html/html_colors.asp
+
+Client setup - http://www.asp.net/signalr/overview/signalr-20/hubs-api/hubs-api-guide-javascript-client
+
+A JavaScript client requires references to jQuery and the SignalR core JavaScript file. The jQuery version must be 1.6.4 or major later versions, such as 1.7.2, 1.8.2, or 1.9.1. If you decide to use the generated proxy, you also need a reference to the SignalR generated proxy JavaScript file. The following example shows what the references might look like in an HTML page that uses the generated proxy.
+
+<script src="Scripts/jquery-1.10.2.min.js"></script>
+<script src="Scripts/jquery.signalR-2.0.0.min.js"></script>
+<script src="signalr/hubs"></script>
+
+These references must be included in this order: jQuery first, SignalR core after that, and SignalR

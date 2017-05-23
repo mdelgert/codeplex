@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "KendoUIGrid";
+}
+
+@section head {
+    @Html.Partial("~/Views/Shared/KendoUIStyle.cshtml")
+}
+
+<h3>Grid example 4.</h3>
+
+<p>Get grid data from web Api.</p>
+
+<div id="grid"></div>
+
+@section scripts {
+
+    @Html.Partial("~/Views/Shared/KendoUIJavaScript.cshtml")
+
+    <script>
+
+        $(document).ready(function () {
+            var webAPI = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: "/CoreApi/StaticTask/GetStaticTasks",
+                        dataType: "json"
+                    },
+                    schema: {
+                        model: {
+                            id: "TaskID",
+                            fields: {
+                                TaskID: { editable: false, type: "number" },
+                                TaskName: { type: "string" }
+                            }
+                        }
+                    }
+                }
+            });
+
+            $("#grid").kendoGrid({
+                dataSource: webAPI,
+                columns: [
+                    { field: "TaskID", title: "Task ID" },
+                    { field: "TaskName", title: "Task Name" }
+                ]
+            });
+        });
+
+    </script>
+}

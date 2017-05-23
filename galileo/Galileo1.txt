@@ -1,0 +1,33 @@
+ubuntu-12.04.3-server-i386.iso setup - http://www.malinov.com/Home/sergey-s-blog/intelgalileo-buildinglinuximage
+$ sudo apt-get install build-essential p7zip-full gawk wget git-core diffstat unzip texinfo build-essential chrpath libsdl1.2-dev xterm
+$ wget http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+$ 7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+$ tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+$ cd meta-clanton_v0.7.5
+$ ./setup.sh
+$ source poky/oe-init-build-env yocto_build
+$ bitbake image-full
+
+
+
+
+
+
+
+
+
+
+
+
+$ su
+# apt-get install build-essential p7zip-full gawk wget git-core diffstat unzip texinfo build-essential chrpath libsdl1.2-dev xterm
+# apt-get update
+# apt-get upgrade
+# exit
+$ wget http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+$ 7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
+$ tar xzvf Board_Support_Package_Sources_for_Intel_Quark_v0.7.5/meta-clanton_v0.7.5.tar.gz
+$ cd meta-clanton_v0.7.5
+$ ./setup.sh
+$ source poky/oe-init-build-env yocto_build
+$ bitbake image-full

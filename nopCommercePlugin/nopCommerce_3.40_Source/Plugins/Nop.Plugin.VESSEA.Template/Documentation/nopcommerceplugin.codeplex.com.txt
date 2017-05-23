@@ -1,0 +1,95 @@
+﻿Project title: nopCommerce Plugin
+Project summary text: The purpose of this project is to create an easy to use Visual Studio 2013 plugin template and nuget package for nopCommerce.
+
+Wiki page home markup:
+
+############################################### BEGIN ###############################################
+
+
+*Project Description*
+
+{project:description}
+
+nopCommerce is a  open-source e-commerce shopping cart. - [url:http://www.nopcommerce.com]
+
+This project will document example source code and explorer nopCommerce developer documentation -
+[url:http://docs.nopcommerce.com/display/nc/Creating+a+nopCommerce+plugin]
+
+*Example nopCommerce source code*
+
+#	Basic template example saving settings on configuration page.
+#	Sample navigation widget supporting full CRUD operations.
+#	Sample widget using KendoUI grid with full CRUD operations.
+
+
+*nopCommerce 3.40 plugin template setup example.*
+
+The developer documentation suggests adding a class project for plugin development - http://docs.nopcommerce.com/display/nc/Creating+a+nopCommerce+plugin
+
+When a class project is select Visual Studio removes the default MVC tools from menu context such as create view and controllers.  
+
+A empty web project is a class project my selecting empty visual studio web project a developer gets the benefits of the MVC developer tools and razor syntax highlighting.
+
+# Right click on plugins
+# Add new project
+# ASP.NET Web Application
+# Nop.Plugin.VESSEA.Template
+# Select folder \Plugins
+# Select empty project
+# Properties web unselected IIS Express
+# Package manager default project set to Nop.Plugin.VESSEA.Template
+
+Install-Package EntityFramework -Version 6.0.0 
+
+Install-Package Microsoft.AspNet.Mvc -Version 5.2.0.0
+
+Add folders  Content, Controllers, Data, Domain, Files, Models, Services, Views & Views\VESSEATemplate
+
+Add files Description.txt and logo.jpg
+
+Right click Views\VESSEATemplate\ select add new view.
+View name:  Configure, Template: Empty without model and unselect use layout page.
+
+Put some sample code in view like.
+
+@{
+    Layout = "";
+}
+
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+   <p>Hello World!</p>
+}
+
+Visual Studio 2013 razor syntax highlighting will not work and have errors until project is compiled for the first time saved, closed the reopen.
+
+*Important*
+
+For a nopCommerce release plugin need to change "set build output path to ..\..\Presentation\Nop.Web\Plugins\VESSEA.Template\"
+
+Select references Microsoft.Web.Infrastructure specific version true
+Select references EntityFramework change copy local to false
+Select references EntityFramework.SqlServer change copy local to false
+Select references Microsoft.Web.Infrastructure change copy local to false
+Select references System.Web.Helpers change copy local to false
+Select references System.Web.Mvc change copy local to false
+Select references System.Web.Razor change copy local to false
+Select references System.Web.WebPages change copy local to false
+Select references System.Web.WebPages.Deployment change copy local to false
+Select references System.Web.WebPages.Razor change copy local to false
+
+In Visual Studio 2013 razor syntax highlighting will stop working after the project gets compiled outside of the "bin\" folder after Visual studio is closed and project is reopened. 
+
+There are many posts in nopCommerce forums regarding MVC razor syntax highlighting not working.
+
+This is very important to understand this behaviour of Visual Studio 2013 for the reason it only happens after the IDE is closed and reopened.
+
+To get razor syntax highlighting working again point the project out put path back at  "bin\" folder save changes. Clean the solution close Visual Studio 2014.
+
+The first time I came across this issue forums suggested making changes to visual studio, reloading visual studio, reseting visual studio settings, code changes and other suggestions.
+
+Visual studio needs "System.Web.Mvc" in the bin directory loaded and compiled in the GAC for syntax highlighting to be enabled.
+
+
+############################################### END ###############################################

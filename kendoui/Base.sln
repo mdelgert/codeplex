@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.MvcApplication", "Base.MvcApplication\Base.MvcApplication.csproj", "{7703C308-7A46-4B9C-A347-94508242FC56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A8BCDC9-0F3C-4EE9-B645-DFCF731E1E46}"
+	ProjectSection(SolutionItems) = preProject
+		BaseNotes.txt = BaseNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Core", "Base.Core\Base.Core.csproj", "{18453E47-8C61-4243-964D-AE029D08BA7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplicationClient", "Base.ConsoleApplicationClient\Base.ConsoleApplicationClient.csproj", "{2FE12588-5980-4B5E-9A2E-216EA94E9167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplicationServer", "Base.ConsoleApplicationServer\Base.ConsoleApplicationServer.csproj", "{0A3DC3C0-0A05-4B03-B044-A9526C3CE5A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.ConsoleApplicationTest", "Base.ConsoleApplicationTest\Base.ConsoleApplicationTest.csproj", "{2EA4AED0-8CB2-4B72-9616-D65B1152E4DA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Base.MvcApplication\\Base.MvcApplication.csproj
+		SccProjectName1 = Base.MvcApplication
+		SccLocalPath1 = Base.MvcApplication
+		SccProjectUniqueName2 = Base.Core\\Base.Core.csproj
+		SccProjectName2 = Base.Core
+		SccLocalPath2 = Base.Core
+		SccProjectUniqueName3 = Base.ConsoleApplicationClient\\Base.ConsoleApplicationClient.csproj
+		SccProjectName3 = Base.ConsoleApplicationClient
+		SccLocalPath3 = Base.ConsoleApplicationClient
+		SccProjectUniqueName4 = Base.ConsoleApplicationServer\\Base.ConsoleApplicationServer.csproj
+		SccProjectName4 = Base.ConsoleApplicationServer
+		SccLocalPath4 = Base.ConsoleApplicationServer
+		SccProjectUniqueName5 = Base.ConsoleApplicationTest\\Base.ConsoleApplicationTest.csproj
+		SccProjectName5 = Base.ConsoleApplicationTest
+		SccLocalPath5 = Base.ConsoleApplicationTest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7703C308-7A46-4B9C-A347-94508242FC56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7703C308-7A46-4B9C-A347-94508242FC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7703C308-7A46-4B9C-A347-94508242FC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7703C308-7A46-4B9C-A347-94508242FC56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18453E47-8C61-4243-964D-AE029D08BA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18453E47-8C61-4243-964D-AE029D08BA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18453E47-8C61-4243-964D-AE029D08BA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18453E47-8C61-4243-964D-AE029D08BA7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE12588-5980-4B5E-9A2E-216EA94E9167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE12588-5980-4B5E-9A2E-216EA94E9167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE12588-5980-4B5E-9A2E-216EA94E9167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE12588-5980-4B5E-9A2E-216EA94E9167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3DC3C0-0A05-4B03-B044-A9526C3CE5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3DC3C0-0A05-4B03-B044-A9526C3CE5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3DC3C0-0A05-4B03-B044-A9526C3CE5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3DC3C0-0A05-4B03-B044-A9526C3CE5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA4AED0-8CB2-4B72-9616-D65B1152E4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA4AED0-8CB2-4B72-9616-D65B1152E4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA4AED0-8CB2-4B72-9616-D65B1152E4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA4AED0-8CB2-4B72-9616-D65B1152E4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home - Page";
+}
+
+
+
+<div class="page-header">
+    <h3>Home</h3>
+</div>
+<div class="bs-example">
+    <form role="form">
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("Form1", "Bootstrap")'">Bootstrap form1</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("TestHttpRspTwo", "Home")'">Test WebApi</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("GridExample1", "KendoUIGrid")'">KendoUI grid example 1</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("GridExample2", "KendoUIGrid")'">KendoUI grid example 2</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("GridExample3", "KendoUIGrid")'">KendoUI grid example 3</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("GridExample4", "KendoUIGrid")'">KendoUI grid example 4</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("SampleEditorOne", "KendoUI")'">Sample editor one</button>
+        </div>
+
+    </form>
+
+</div>
+
+@*
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("GetViewByName", "Home", new { viewFolder = "KendoUIGrid", viewName = "GridExample1.cshtml" })'">Test</button>
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href = 'Home/GetViewByName?viewFolder=KendoUIGrid&viewName=GridExample1.cshtml'">Test</button>
+    </div>
+*@

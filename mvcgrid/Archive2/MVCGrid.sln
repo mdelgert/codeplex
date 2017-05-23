@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{82CB7D7A-75ED-41F4-9B55-160998C17B8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CB720681-F027-4113-A35A-B52D28533904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCGrid.Web", "MVCGrid.Web\MVCGrid.Web.csproj", "{045AECB6-0061-4C8D-BD21-C7A9965D0347}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCGrid.Core", "MVCGrid.Core\MVCGrid.Core.csproj", "{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{A48C9AB4-AB59-4048-AB33-851B067E563A}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "MVCGrid.DB", "MVCGrid.DB\MVCGrid.DB.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs25
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MVCGrid.Core\\MVCGrid.Core.csproj
+		SccProjectTopLevelParentUniqueName1 = MVCGrid.sln
+		SccProjectName1 = MVCGrid.Core
+		SccLocalPath1 = MVCGrid.Core
+		SccProjectUniqueName2 = MVCGrid.Web\\MVCGrid.Web.csproj
+		SccProjectTopLevelParentUniqueName2 = MVCGrid.sln
+		SccProjectName2 = MVCGrid.Web
+		SccLocalPath2 = MVCGrid.Web
+		SccProjectUniqueName3 = MVCGrid.DB\\MVCGrid.DB.dbproj
+		SccProjectTopLevelParentUniqueName3 = MVCGrid.sln
+		SccProjectName3 = MVCGrid.DB
+		SccLocalPath3 = MVCGrid.DB
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{045AECB6-0061-4C8D-BD21-C7A9965D0347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045AECB6-0061-4C8D-BD21-C7A9965D0347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045AECB6-0061-4C8D-BD21-C7A9965D0347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045AECB6-0061-4C8D-BD21-C7A9965D0347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{045AECB6-0061-4C8D-BD21-C7A9965D0347} = {82CB7D7A-75ED-41F4-9B55-160998C17B8B}
+		{C81CC1C5-50EF-4A0D-BB88-1EB40D62B0A5} = {CB720681-F027-4113-A35A-B52D28533904}
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3} = {A48C9AB4-AB59-4048-AB33-851B067E563A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿@model MVCGrid.Core.Product
+@{
+    ViewBag.Title = "Read";
+}
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+    <h2>ProductID=@ViewBag.Message</h2>
+    @Html.Raw(@Model.ProductText)
+</div>

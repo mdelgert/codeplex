@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A10D080-F3B6-4DEA-AB26-E67256A99D86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScreenMate</RootNamespace>
+    <AssemblyName>ScreenMate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Emblem\TNGComm.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ReadMe.docx" />
+    <None Include="Resources\Vector\ExplosionCollection1.ai" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SoundClips\tng-computer-2hours.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-computer-affirmative.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-computer-programcomplete.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-computer-transfercomplete.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-computer-working.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-data-allsystems.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-data-beinghailed.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-data-ihaveaccess.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-locutus-urlifeisover.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-picard-engage.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-picard-makeitso.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-picard-statusreport.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-worf-incomingmessage.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\tng-doorbell.wav" />
+    <EmbeddedResource Include="Resources\Starships\USSExcelsiorNCC2000\icon.ico" />
+    <Content Include="Resources\Emblem\TNGComm.ico" />
+    <Content Include="Resources\Emblem\TNGComm.png" />
+    <EmbeddedResource Include="Resources\Explosion\BangLarge1.png" />
+    <EmbeddedResource Include="Resources\Explosion\BangMedium1.png" />
+    <EmbeddedResource Include="Resources\Explosion\BangSmall1.png" />
+    <EmbeddedResource Include="Resources\Explosion\BoomLarge1.png" />
+    <EmbeddedResource Include="Resources\Explosion\BoomMedium1.png" />
+    <EmbeddedResource Include="Resources\Explosion\BoomSmall1.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionLarge1.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionLarge2.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionMedium1.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionMedium2.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionSmall1.png" />
+    <EmbeddedResource Include="Resources\Explosion\ExplosionSmall2.png" />
+    <Content Include="Resources\ScreenPrints\ScreenPrint1.png" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_adapt2.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_adapt3.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_adapt4.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_alcove_regen_cycle.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_alcove_regen_cycle_abort.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_beam_clean.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_cut_clean.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_flyby.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_phaser_clean.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_tractor_beam.wav" />
+    <EmbeddedResource Include="Resources\SoundClips\Borg\borg_transporter.wav" />
+    <Content Include="Resources\Starships\Borg\borg-cube-angled.jpg" />
+    <Content Include="Resources\Starships\Borg\borg-cube-front.jpg" />
+    <EmbeddedResource Include="Resources\Starships\Borg\Left.gif" />
+    <EmbeddedResource Include="Resources\Starships\Borg\Right.gif" />
+    <Content Include="Resources\Starships\USSExcelsiorNCC2000\icon.jpg" />
+    <EmbeddedResource Include="Resources\Starships\USSExcelsiorNCC2000\Left.gif" />
+    <Content Include="Resources\Starships\USSExcelsiorNCC2000\original.jpg" />
+    <EmbeddedResource Include="Resources\Starships\USSExcelsiorNCC2000\Right.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

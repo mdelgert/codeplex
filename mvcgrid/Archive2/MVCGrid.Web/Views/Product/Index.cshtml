@@ -1,0 +1,113 @@
+﻿@*@model IEnumerable<MVCGrid.Core.Product>*@
+@model IEnumerable<MVCGrid.Core.Models.ProductModel>
+@{
+    ViewBag.Title = "HTML Table";
+}
+@*
+http://welldonethings.com/tags/manager
+https://github.com/max-favilli/tagmanager
+
+<script type="text/javascript">
+    jQuery(".tagManager").tagsManager();
+</script>
+
+*@
+<div class="container">
+    <h1>@ViewBag.Title</h1>
+    <div>
+        Response Time MS: @ViewBag.rspTime
+    </div>
+    <div>
+        TOTAL RECORDS: @ViewBag.TotalRows
+    </div>
+    <div>
+        NUM OF PAGES: @ViewBag.numberOfPages
+    </div>
+    <div>
+        ROWS PER PAGE:
+        @Html.DropDownList("RowsPerPageList", null, new { @onchange = "location = '/Product/Index?pageSize=' + this.value;" })
+    </div>
+    <div class="pagination">
+        <ul>
+            <li><a href="#">Prev</a></li>
+            <li><a href="/Product/Index/?pageIndex=1">1</a></li>
+            <li><a href="/Product/Index/?pageIndex=2">2</a></li>
+            <li><a href="/Product/Index/?pageIndex=3">3</a></li>
+            <li><a href="/Product/Index/?pageIndex=4">4</a></li>
+            <li><a href="/Product/Index/?pageIndex=5">Next</a></li>
+        </ul>
+    </div>
+    <div>
+        ORDER BY: @Html.DropDownList("orderBy", null, new { @onchange = "location = '/Product/Index?orderBy=' + this.value;" })
+    </div>
+    <div>
+        ORDER DIRECTION: @Html.DropDownList("orderDirection", null, new { @onchange = "location = '/Product/Index?orderDirection=' + this.value;" })
+    </div>
+    <form class="form-search">
+    <div>
+        SEARCH BY:
+        @Html.DropDownList("searchBy", null, new { @onchange = "location = '/Product/Index/?searchBy=' + this.value;" })
+    </div>
+    <div>
+        SEARCH TEXT:
+        <input type="text" name="SearchText" class="span2 search-query">
+        <button type="submit" class="btn" onclick="location = '?searchText=SearchText.value'">
+            Search</button>
+    </div>
+    </form>
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td>
+                    ProductID:
+                </td>
+                <td>
+                    ProductName:
+                </td>
+                <td>
+                    TAGS:
+                </td>
+                <td>
+                    Product Type:
+                </td>
+                <td>
+                    ACTIVE:
+                </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr style="cursor: pointer;" onclick="location.href='/Product/Read?ProductID=@(item.ProductID)'">
+                    <td>
+                        @(item.ProductID)
+                    </td>
+                    <td>
+                        @(item.ProductName)
+                    </td>
+                    <td>
+                        @(item.TAGS)
+                    </td>
+                    <td>
+                        @(item.ProductTypeName)
+                    </td>
+                    <td>
+                        @(item.Active)
+                    </td>
+                    <td>
+                        <a class="btn btn-success" href="@Url.Action("Create")">Create <i class="icon-pencil">
+                        </i></a><a class="btn btn-success" href="@Url.Action("Read", "Product", new { ProductID = item.ProductID })">
+                            Read <i class="icon-pencil"></i></a><a class="btn btn-success" href="@Url.Action("Update", "Product", new { ProductID = item.ProductID })">
+                                Update <i class="icon-pencil"></i></a><a class="btn btn-success" href="@Url.Action("Delete", "Product", new { ProductID = item.ProductID })">
+                                    Delete <i class="icon-pencil"></i></a>@*
+                        @Html.ActionLink("Create", "Create", "Product", new { @class = "btn btn-primary" }) 
+                        @Html.ActionLink("Read", "Read", new { ProductID = item.ProductID }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Update", "Update", new { ProductID = item.ProductID }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new { item.ProductID }, new { @class = "btn btn-primary" })
+                        *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
